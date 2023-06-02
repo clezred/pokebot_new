@@ -1,0 +1,3 @@
+## Open source PokéBot Français
+
+> README pas encore rédigé...
