@@ -145,8 +145,8 @@ client.on(Events.InteractionCreate, async interaction => {
         return;
     }
 
-    if (interaction.commandName == 'me' && interaction.guildId != '759781274105151488') {
-        interaction.reply({content: "Tu n'es pas sur le bon serveur pour exécuter cette commande. Elle ne fontionne que sur le serveur officiel du PokéBot.", ephemeral: true});
+    if (interaction.commandName == 'me' && interaction.user.id == interaction.guild.ownerId) {
+        interaction.reply({content: "Je n'ai pas le droit d'agir sur le propriétaire du serveur, je ne peux donc pas t'assigner un Pokémon.", ephemeral: true});
         return;
     }
 
