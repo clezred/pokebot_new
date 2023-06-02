@@ -1,0 +1,16 @@
+{
+  "name": "pokebot",
+  "version": "0.7.0",
+  "description": "Discord bot about Pokemon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "clezred",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "papaparse": "^5.4.1"
+  }
+}
