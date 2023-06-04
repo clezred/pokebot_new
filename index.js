@@ -1,9 +1,8 @@
 const fs = require('node:fs');
 const Papa = require('papaparse');
 const path = require('node:path');
-const { Client, GatewayIntentBits, Partials, ActivityType, Collection, Events, WelcomeChannel } = require('discord.js');
+const { Client, GatewayIntentBits, Partials, ActivityType, Collection, Events } = require('discord.js');
 const { token } = require('./config.json');
-const { gameActivity } = require('./assets/js/gameActivity');
 const { random } = require('./assets/js/random.js')
 const pkmGames = require('./assets/json/pkmgames.json')
 
@@ -73,22 +72,22 @@ var pokeliste = Papa.parse(fs.readFileSync('./assets/csv/pokeliste.csv', "utf-8"
 
 client.login(token);
 
-client.on('ready', () => {
+client.on(Events.ClientReady, () => {
     mainGuild = client.guilds.cache.get('759781274105151488') // à modifier
     logsChannel = mainGuild.channels.cache.get('1113867865314046112') // à modifier
 
     logsChannel.send(`Le bot est prêt en tant que ${client.user.tag}!`);
 
-    pkmGameActivity = gameActivity();
+    pkmGameActivity = random(1,38);
     updateBotStatus();
 
     activityInterval = setInterval(() => {
-        pkmGameActivity = gameActivity();
+        pkmGameActivity = random(1,38);
         updateBotStatus();
     }, 600000);
 });
 
-client.on('messageCreate', (message) => {
+client.on(Events.MessageCreate, (message) => {
      // COMMANDES ADMIN
      if (message.author.id == '285400340696793090') {
         // ARRET COMPLET
@@ -162,7 +161,7 @@ client.on(Events.InteractionCreate, async interaction => {
 	}
 });
 
-client.on('guildMemberAdd', member => {
+client.on(Events.GuildMemberAdd, member => {
 
     if (member.guild.id === '759781274105151488') { // à modifier
         let pkID = random(1,905);

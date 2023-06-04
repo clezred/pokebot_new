@@ -1,0 +1,20 @@
+{
+    "Insecte" : "9BBB31",
+    "Ténèbres" : "585761",
+    "Dragon" : "006CC7",
+    "Electrique" : "FBD850",
+    "Fée" : "EB93E5",
+    "Combat" : "D6435F",
+    "Feu" : "FFA54D",
+    "Vol" : "98BCEC",
+    "Spectre" : "4E6FBC",
+    "Plante" : "6ABD5A",
+    "Sol" : "DE7C4D",
+    "Glace" : "73D0C2",
+    "Normal" : "A0A29F",
+    "Poison" : "B066CF",
+    "Psy" : "FE8581",
+    "Roche" : "CEBB8B",
+    "Métal" : "4F95A3",
+    "Eau" : "349EDF"
+  }
