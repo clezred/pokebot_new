@@ -87,14 +87,14 @@ client.on(Events.ClientReady, () => {
     }, 600000);
 });
 
-client.on(Events.MessageCreate, (message) => {
+client.on(Events.MessageCreate, async (message) => {
      // COMMANDES ADMIN
      if (message.author.id == '285400340696793090') {
         // ARRET COMPLET
         if (message.content.toUpperCase().startsWith('-STOP')) {
             clearInterval(activityInterval);
             logsChannel.send('Bot arrêté').then(() => {
-               client.destroy(); 
+               client.destroy();
             })
         } else
         // MAINTENANCE
@@ -124,7 +124,28 @@ client.on(Events.MessageCreate, (message) => {
                 logsChannel.send('Le bot a quitté le mode vanish.');
             }
             updateBotStatus();
-        } 
+        }
+
+        if (message.content.toUpperCase().startsWith('-SERVERS')) {
+            await client.guilds.fetch();
+
+            const guilds = client.guilds.cache;
+
+            let desc = "`" + guilds.size + " serveurs`";
+
+            guilds.forEach(guild => {
+                desc += "\n- " + guild.name + " | " + guild.id;
+            });
+
+            message.reply({embeds: [{
+                author: {
+                    name: "Liste des serveurs"
+                },
+                color: 0xFFFF00,
+                description: desc
+            }], ephemeral: true});
+
+        }
      }
 });
 

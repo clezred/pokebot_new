@@ -58,8 +58,8 @@ function pokedexID(pkID) {
 
     if (pkm[6] != "") {
         pkmFields.push({
-            name: "Formes Alternatives",
-            value: "Ce Pokémon possède " + pkm[6] + " formes alternatives (En prenant en compte la forme de base)",
+            name: "Formes",
+            value: "Ce Pokémon possède " + pkm[6] + " formes différentes",
             inline: false
         })
     }
@@ -68,16 +68,22 @@ function pokedexID(pkID) {
 
     if (pkmNameFix.includes(" ")) pkmNameFix = pkmNameFix.replace(" ", "_");
 
+    let id = `${pkm[0]}`
+    while (id.length < 4) {
+      id = "0" + id
+    }
+
     let embed = {
         author: {
             name: pkm[2], 
             url: `https://www.pokepedia.fr/${pkmNameFix}`,
-            iconURL: 'https://cdn.discordapp.com/attachments/940549449925668884/1114570590456651826/pokedex_icon.png'
+            iconURL: 'https://cdn.discordapp.com/attachments/1113867865314046112/1115285679727976469/pokedex_icon.png'
         },
         color: parseInt(typescolor[pkm[3]], 16),
-        description: `*Pokémon n°${pkm[0]} | Génération ${pkm[1] + pkmRare}*`,
+        description: `*Pokémon n°${id} | Génération ${pkm[1] + pkmRare}*`,
+        thumbnail: {url: `https://raw.githubusercontent.com/CleZReD/PokeSprites/main/sugimori/${pkm[0]}.png`},
         fields: pkmFields,
-        footer: {text: "Cliquez sur le nom du Pokémon pour accéder à sa page Poképédia."}
+        footer: {text: "Cliquez sur le nom du Pokémon pour accéder à sa page Poképédia.", iconURL: 'https://www.pokepedia.fr/images/9/91/Crehelfpokepedia5.png'}
     };
 
     return embed;
@@ -95,7 +101,7 @@ function pokedexName(name) {
         }
     }
 
-    if (i > 905) return null;
+    if (i > 1010) return null;
 
     return pokedexID(i);
 }

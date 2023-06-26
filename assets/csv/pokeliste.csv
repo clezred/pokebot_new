@@ -191,7 +191,7 @@
 191,2,Tournegrin,Plante,,,,Base,"Il tombe du ciel soudainement. S'il est attaqué par un Piafabec, il secoue violemment ses feuilles.",
 192,2,Héliatronc,Plante,,,,Niveau 1,"Il convertit la lumière du soleil en énergie. Quand la nuit tombe, ses pétales se referment.",
 193,2,Yanma,Insecte,Vol,,,Base,"En battant des ailes très vite, il peut générer une onde de choc très violente.",
-194,2,Axoloto,Eau,Sol,,,Base,Ce Pokémon vit en eau froide. Il sort de l'eau pour se nourrir quand il fait froid à l'extérieur.,
+194,2,Axoloto,Eau,Sol,,2,Base,Ce Pokémon vit en eau froide. Il sort de l'eau pour se nourrir quand il fait froid à l'extérieur.,
 195,2,Maraiste,Eau,Sol,,,Niveau 1,"Ce Pokémon est très insouciant. Quand il nage, il fonce tête la première dans la coque des bateaux.",
 196,2,Mentali,Psy,,,,Niveau 1,Son fin pelage enregistre les courants d'air provoqués par les déplacements de ses ennemis.,
 197,2,Noctali,Ténèbres,,,,Niveau 1,Pour se défendre ce Pokémon émet un gaz empoisonné par les pores de sa peau.,
@@ -916,3 +916,95 @@
 916,9,Fragroin,Normal,,,2,Niveau 1,Il dégage un agréable parfum fleuri. Les muscles bien développés de ses jambes lui permettent de sauter des obstacles de cinq mètres avec aisance.,
 917,9,Tissenboule,Insecte,,,,Base,"La boule de fil qui entoure son corps est assez élastique pour repousser les faux d'Insécateur, son ennemi juré.",
 918,9,Filentrappe,Insecte,,,,Niveau 1,Ce Pokémon s'accroche aux branches ou aux plafonds grâce à son fil et se déplace en silence. Il élimine ses proies sans qu'elles le remarquent.,
+919,9,Lilliterelle,Insecte,,,,Base,Sa troisième paire de pattes est repliée. Il possède assez de force pour sauter à plus de dix mètres lorsqu'il est en difficulté.,
+920,9,Gambex,Insecte,Ténèbres,,,Niveau 1,"Quand les choses deviennent sérieuses, il passe en mode assaut et se tient sur son autre paire de pattes. Il neutralise ses ennemis en un clin d'œil.",
+921,9,Pohm,Electrique,,,,Base,Les poches sur ses joues sont peu développées. Elles ne produisent de l'électricité que lorsqu'il les frotte avec ses coussinets.,
+922,9,Pohmotte,Electrique,Combat,,,Niveau 1,"Quand on attaque son groupe, ce Pokémon est le premier à riposter. Il défait ses adversaires avec un art martial qui repose sur l'électricité.",
+923,9,Pohmarmotte,Electrique,Combat,,,Niveau 2,Sa fourrure soyeuse fait office de batterie. Elle peut emmagasiner autant d'énergie qu'une voiture électrique.,
+924,9,Compagnol,Normal,,,,Base,"Ces Pokémon travaillent en équipe. À l'aide de leur incisive, ils extraient les matériaux nécessaires pour construire leur nid, puis ils les emportent.",
+925,9,Famignol,Normal,,,2,Niveau 1,"Ils construisent des nids gigantesques divisés en espaces distincts qui répondent à différents besoins, comme dormir ou s'alimenter.",
+926,9,Pâtachiot,Fée,,,,Base,Ce Pokémon est moite et lisse au toucher. Il fait fermenter ce qui se trouve à proximité grâce à la levure que contient son souffle.,
+927,9,Briochien,Fée,,,,Niveau 1,La surface de sa peau durcit lorsqu'elle est exposée à une forte chaleur. Son corps exhale un délicieux parfum.,
+928,9,Olivini,Plante,Normal,,,Base,Le fruit qui surmonte sa tête sécrète une huile qui le protège de ses adversaires. Ce liquide a un goût si désagréable qu'il fait grimacer.,
+929,9,Olivado,Plante,Normal,,,Niveau 1,Ce Pokémon partage volontiers son huile fraîche et délicieuse. Il vit en harmonie avec les êtres humains depuis les temps anciens.,
+930,9,Arboliva,Plante,Normal,,,Niveau 2,Il repousse ses adversaires en projetant son huile riche en arômes avec suffisamment de force pour pulvériser un rocher.,
+931,9,Tapatoès,Normal,Vol,,4,Base,Ces Pokémon préfèrent vivre en ville. Ils forment des groupes selon la couleur de leur plumage et se livrent à des luttes de territoire.,
+932,9,Selutin,Roche,,,,Base,"Ce Pokémon est né dans des couches souterraines de sel gemme. Connu pour partager son précieux sel, il était apprécié autrefois.",
+933,9,Amassel,Roche,,,,Niveau 1,Il projette du sel pour en recouvrir ses proies. Celles-ci subissent alors un processus de salaison et se déshydratent.,
+934,9,Gigansel,Roche,,,,Niveau 2,"Le sel dont il saupoudre les Pokémon blessés en frottant le bout de ses doigts guérit aussitôt toutes les blessures, même les plus graves.",
+935,9,Charbambin,Feu,,,,Base,Ce Pokémon est un charbon de bois consumé qui a pris vie. Il est animé par un désir de combattre qui le pousse à défier des adversaires puissants.,
+936,9,Carmadura,Feu,Psy,,,Niveau 1,Il a évolué grâce à l'armure d'une illustre âme guerrière. Ce Pokémon est extrêmement loyal.,
+937,9,Malvalame,Feu,Spectre,,,Niveau 1,Il a évolué grâce à une vieille armure imprégnée de rancœur. Ce Pokémon lacère ses ennemis sans aucune merci.,
+938,9,Têtampoule,Electrique,,,,Base,"Ce Pokémon produit de l'électricité en agitant sa queue. Lorsqu'il perçoit un danger, sa tête clignote pour avertir ses congénères.",
+939,9,Ampibidou,Electrique,,,,Niveau 1,Ses organes semblables à des yeux servent à projeter l'électricité produite par son nombril-dynamo.,
+940,9,Zapétrel,Electrique,Vol,,,Base,"Les os de ses ailes produisent de l'électricité grâce au vent. Pour chasser, ce Pokémon plonge dans la mer et électrocute ses proies.",
+941,9,Fulgulairo,Electrique,Vol,,,Niveau 1,"Lorsqu'il gonfle son sac gulaire, l'intensité du courant électrique qu'il produit augmente. Il peut parcourir 700 km par jour en planant.",
+942,9,Grondogue,Ténèbres,,,,Base,Sa mâchoire et ses crocs bien développés sont assez puissants pour broyer des rochers. Sa graisse épaisse lui octroie une excellente protection.,
+943,9,Dogrino,Ténèbres,,,,Niveau 1,Ce Pokémon emmagasine de l'énergie dans ses grandes bajoues. Il la libère ensuite d'un coup pour balayer ses adversaires au loin.,
+944,9,Gribouraigne,Poison,Normal,,,Base,"Ce Pokémon est d'un naturel doux, mais lorsqu'il se met en colère, il mord à l'aide de ses incisives acérées et imprégnées de venin paralysant.",
+945,9,Tag-Tag,Poison,Normal,,,Niveau 1,Sa salive toxique change de couleur selon son alimentation. Il en enduit ses doigts pour dessiner des motifs sur les arbres de la forêt.,
+946,9,Virovent,Plante,Spectre,,,Base,"Ce Pokémon est né lorsque, portée par le vent, une âme incapable de trouver le repos s'est retrouvée empêtrée dans des herbes sèches.",
+947,9,Virevorreur,Plante,Spectre,,,Niveau 1,"Il déplie ses branches pour gober ses proies. Une fois qu'il a absorbé la quantité d'énergie vitale qu'il souhaitait, il les recrache.",
+948,9,Terracool,Sol,Plante,,,Base,Il vit dans les forêts humides. La partie ondulée qui entoure son abdomen peut se détacher. Elle est croquante et délicieuse.,
+949,9,Terracruel,Sol,Plante,,,Niveau 1,Ces Pokémon vivent en colonies au fin fond des bois. Ils détestent au plus haut point que des personnes inconnues s'approchent d'eux.,
+950,9,Craparoi,Roche,,,,Base,Il vit sur les falaises escarpées et esquive les attaques en se déplaçant sur le côté. Il vise les points faibles de ses adversaires avec ses pinces.,
+951,9,Pimito,Plante,,,,Base,"Une fois tombée, l'incisive de ce Pokémon sert à relever les plats de la région de Paldea.",
+952,9,Scovilain,Plante,Feu,,,Niveau 1,Sa tête rouge convertit la substance piquante produite par son corps en énergie de type Feu et crache des flammes brûlantes.,
+953,9,Léboulérou,Insecte,,,,Base,Il fait rouler sa boule de boue jusqu'à ce qu'il ait accumulé l'énergie nécessaire à son évolution.,
+954,9,Bérasca,Insecte,Psy,,,Niveau 1,Il fait doucement tourner sa sphère avec ses pattes afin d'assurer le confort du nouveau-né qui dort à l'intérieur.,
+955,9,Flotillon,Psy,,,,Base,Il lévite à un centimètre du sol grâce à l'énergie psychique qui émane des volants de son abdomen.,
+956,9,Cléopsytra,Psy,,,,Niveau 1,Son énergie psychique émane des interstices situés entre ses volants colorés. Il peut courir à une vitesse de 200 km/h.,
+957,9,Forgerette,Fée,Acier,,,Base,Ce Pokémon frappe des copeaux de ferraille afin de se fabriquer un marteau. Il persévère jusqu'à ce qu'il soit satisfait du résultat.,
+958,9,Forgella,Fée,Acier,,,Niveau 1,Ce Pokémon attaque des cohortes de Scalpion et de Scalproie pour rassembler le métal nécessaire à la confection d'un grand marteau robuste.,
+959,9,Forgelina,Fée,Acier,,,Niveau 2,Ce Pokémon très intelligent et hardi jette des rochers dans les airs puis les frappe avec son marteau en visant les Corvaillus qui volent.,
+960,9,Taupikeau,Eau,,,,Base,"Sa ressemblance fortuite avec Taupiqueur serait le fruit d'une adaptation à son milieu. Malgré leur similarité, ils ne sont pas de la même espèce.",
+961,9,Triopikeau,Eau,,,,Niveau 1,"Par le passé, ce Pokémon poisson a parfois été considéré comme une forme régionale de Triopikeur.",
+962,9,Lestombaile,Vol,Ténèbres,,,Base,Ce Pokémon transporte sa nourriture jusqu'à son nid grâce à son tablier. Il aime larguer des objets qui s'écrasent avec fracas.,
+963,9,Dofin,Eau,,,,Base,Il a confectionné l'anneau autour de sa queue à partir d'eau de mer et du liquide collant que son évent sécrète.,
+964,9,Superdofin,Eau,,,2,Niveau 1,"Il change de forme dès qu'il entend les cris de détresse de ses congénères, mais il ne laissera jamais personne assister à sa transformation.",
+965,9,Vrombi,Acier,Poison,,,Base,On raconte qu'il est né lorsqu'un mystérieux Pokémon Poison a pris possession d'un moteur laissé à l'abandon dans une casse.,
+966,9,Vrombotor,Acier,Poison,,,Niveau 1,Il produit de l'énergie en faisant exploser dans ses huit cylindres un mélange gazeux qui contient une substance toxique et des minéraux.,
+967,9,Motorizard,Dragon,Normal,,,Base,Des fresques vieilles de 10 000 ans laissent penser que ce Pokémon transporte des êtres humains sur son dos depuis les temps anciens.,
+968,9,Ferdeter,Acier,,,,Base,Ce Pokémon vit dans les déserts arides. Il ingère le fer que contient le sol afin d'entretenir son corps de métal.,
+969,9,Germéclat,Roche,Poison,,,Base,Il absorbe les nutriments qui se trouvent dans les parois des grottes. Les pétales qui recouvrent son corps sont constitués de poison cristallisé.,
+970,9,Floréclat,Roche,Poison,,,Niveau 1,On a récemment découvert que ses pétales constitués d'énergie toxique cristallisée ressemblent à des Joyaux Téracristal.,
+971,9,Toutombe,Spectre,,,,Base,On pense qu'il est la réincarnation d'un Pokémon chien errant qui a perdu la vie sans jamais avoir eu d'interaction avec les êtres humains.,
+972,9,Tomberro,Spectre,,,,Niveau 1,Il passe la majeure partie de son temps à dormir dans des cimetières. C'est le Pokémon chien le plus loyal au monde.,
+973,9,Flamenroule,Vol,Combat,,,Base,Leur capacité à se synchroniser permet à toute une volée d'attaquer parfaitement à l'unisson.,
+974,9,Piétacé,Glace,,,,Base,Ces Pokémon vivent généralement en groupes de cinq dans les régions froides. Ils raffolent des minéraux que contiennent la neige et la glace.,
+975,9,Balbalèze,Glace,,,,Niveau 1,Ce Pokémon arpente les étendues de neige et de glace. Ses muscles puissants et son épaisse couche de graisse protègent son corps.,
+976,9,Délestin,Eau,Psy,,,Base,"Pour aiguiser son esprit et renforcer ses pouvoirs psychiques, il se défait de sa chair en trop. Celle-ci a un goût léger, mais exquis.",
+977,9,Oyacata,Eau,,,,Base,Il semblerait que ce puissant Pokémon ne se distingue pas par son intelligence. Il considère Nigirigon comme son supérieur.,
+978,9,Nigirigon,Dragon,Eau,,3,Base,"Ce petit Pokémon Dragon vit dans la gueule d'Oyacata, à l'abri de ses adversaires.",
+979,9,Courrousinge,Combat,Spectre,,,Niveau 2,"Quand sa colère a franchi un seuil critique, il a acquis une puissance qui l'a émancipé des limites de son corps.",
+980,9,Terraiste,Poison,Sol,,,Niveau 1,Ce Pokémon vit au fond des étangs et des marais. Il porte des Axoloto sur son dos et nage jusqu'à la rive opposée pour les aider à traverser.,
+981,9,Farigiraf,Normal,Psy,,,Niveau 1,"Grâce à la synchronisation des ondes cérébrales de sa tête et de sa queue, ses pouvoirs psychiques sont dix fois plus puissants que ceux de Girafarig.",
+982,9,Deusolourdo,Normal,,,2,Niveau 1,Il se sert de sa queue pour creuser son terrier dans les profondeurs rocheuses de la terre. Celui-ci peut faire jusqu'à 10 km de long.,
+983,9,Scalpereur,Ténèbres,Acier,,,Niveau 2,"Ce Pokémon commande une grande armée, mais c'est un piètre stratège. Il s'obstine donc à recourir à la force brute.",
+984,9,Fort-Ivoire,Sol,Combat,,,Base,"Il ressemble à un Pokémon mystérieux qui, selon une revue consacrée aux phénomènes paranormaux, existerait depuis la nuit des temps.",P
+985,9,Hurle-Queue,Fée,Psy,,,Base,"Il ressemble à un Pokémon mystérieux qui serait un Rondoudou d'il y a un milliard d'années, selon une revue sur les phénomènes paranormaux.",P
+986,9,Fongus-Furie,Plante,Ténèbres,,,Base,Il ressemble vaguement à un Pokémon mi-dinosaure mi-champignon évoqué dans une revue douteuse.,P
+987,9,Flotte-Mèche,Spectre,Fée,,,Base,Il présente des similitudes avec un fantôme de ptérosaure évoqué dans une revue sur les phénomènes paranormaux.P
+988,9,Rampe-Ailes,Insecte,Combat,,,Base,Il ressemble vaguement à une forme de Pyrax très ancienne évoquée dans une revue douteuse.,P
+989,9,Pelage-Sablé,Electrique,Sol,,,Base,"Il ressemble vaguement à un Magnéton qui aurait vécu 10 000 ans, selon un article paru dans une revue consacrée aux phénomènes paranormaux.",P
+990,9,Roue-de-Fer,Sol,Acier,,,Base,"Il ressemble beaucoup à une arme sophistiquée qui serait d'origine extraterrestre, selon une revue consacrée aux phénomènes paranormaux.",P
+991,9,Hotte-de-Fer,Glace,Eau,,,Base,"Sa forme est similaire à celle d'un robot créé par une civilisation antique, d'après un article d'une revue consacrée aux phénomènes paranormaux.",P
+992,9,Paume-de-Fer,Combat,Electrique,,,Base,Il ressemble à l'athlète transformé en cyborg dont l'histoire avait été révélée en exclusivité dans une revue sur les phénomènes paranormaux.,P
+993,9,Têtes-de-Fer,Ténèbres,Vol,,,Base,"Il ressemble à un Pokémon qui serait l'enfant d'un Trioxhydre amoureux d'un robot, selon une revue consacrée aux phénomènes paranormaux.",P
+994,9,Mite-de-Fer,Feu,Poison,,,Base,"Il ressemble à une entité étrange décrite dans une revue sur les phénomènes paranormaux. D'après celle-ci, ce serait un ovni qui épie la race humaine.",P
+995,9,Épine-de-Fer,Roche,Electrique,,,Base,"Son apparence partage des similarités avec celle qu'auront les Tyranocif dans un milliard d'années, selon une revue douteuse.",P
+996,9,Frigodo,Dragon,Glace,,,Base,Il vit dans les zones rocheuses et les forêts. Sa crête dorsale lui permet de refroidir l'intérieur de son nid à la manière d'un congélateur.,
+997,9,Cryodo,Dragon,Glace,,,Niveau 1,Il gèle l'air alentour pour protéger son visage avec un masque de glace et doter sa crête dorsale de lames gelées.,
+998,9,Glaivodo,Dragon,Glace,,,Niveau 2,L'air qu'il crache est tellement froid qu'il peut geler instantanément du magma en fusion.,
+999,9,Mordudor,Spectre,,,2,Base,Ce Pokémon est né d'une pièce de monnaie imprégnée de passion. Il semble errer à la recherche de son coffre d'origine.,
+1000,9,Gromago,Acier,Spectre,,,Niveau 1,Son corps robuste est composé de pièces empilées. Il accable ses adversaires en leur lançant des rafales de pièces.,
+1001,9,Chongjian,Ténèbres,Plante,,,Base,La rancœur d'un être humain puni pour avoir noté les méfaits d'un roi sur des tablettes en bois s'est mêlée à des feuilles mortes et a pris vie.,L
+1002,9,Baojian,Ténèbres,Glace,,,Base,Ce Pokémon peut contrôler 100 tonnes de neige tombée. Il s'amuse en sautant joyeusement dans les avalanches qu'il provoque.,L
+1003,9,Dinglu,Ténèbres,Sol,,,Base,La peur déversée dans un réceptacle utilisé lors de rites anciens s'est mêlée à de la terre et à des pierres et a pris vie.,L
+1004,9,Yuyu,Ténèbres,Feu,,,Base,Ce Pokémon manipule des flammes à 3 000°C. Il nage tranquillement dans une mer de magma qu'il a créée en faisant fondre de la roche et du gravier.,L
+1005,9,Rugit-Lune,Dragon,Ténèbres,,,Base,"Selon un article paru dans une revue douteuse, ce Pokémon serait lié à un phénomène qui se produit dans certaines régions.",P
+1006,9,Garde-de-Fer,Fée,Combat,,,Base,Il ressemble un peu à l'invention d'un cerveau dément mentionnée dans une revue consacrée aux phénomènes paranormaux.,P
+1007,9,Koraidon,Combat,Dragon,,4,Base,"Il ressemble à Motorizard, mais en bien plus robuste et violent. On ignore tout de son mode de vie.",L
+1008,9,Miraidon,Electrique,Dragon,,4,Base,"On manque d'informations à son sujet. Il ressemble à Motorizard, mais en bien plus fort et cruel.",L
+1009,9,Serpente-Eau,Eau,Dragon,,,Base,Recherches sur cette espèce en cours.,P
+1010,9,Vert-de-Fer,Plante,Psy,,,Base,Analyses sur cette espèce en cours.,P

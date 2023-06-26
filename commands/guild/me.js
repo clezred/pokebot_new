@@ -9,6 +9,7 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('me')
 		.setDescription('Te permet d\'obtenir le Pokémon qui te repésente sur le serveur du PokéBot !'),
+        
 	async execute(interaction) {
 		const button = new ButtonBuilder()
             .setLabel('Obtenir mon Pokémon')
@@ -35,15 +36,20 @@ module.exports = {
 
             const member = interaction.guild.members.cache.get(subinteraction.user.id);
 
-            let pkID = random(1,905);
+            let pkID = random(1,1010);
             let shiny = random(1,4096);//4096
             let pkm = pokeliste.data[pkID];
-            let pkm_name = pkm[2]; 
+            let pkm_name = pkm[2];
+            let displayName = member.user.username;
+            if (displayName.length > (32 - (pkm_name.length + 4))) {
+                displayName = displayName.substring(0, (32 - (pkm_name.length + 7))) + "..."
+            }
+
             if (shiny == 1) {
-                member.setNickname(member.user.username + " | " + pkm_name + "✨");
+                member.setNickname(displayName + " | " + pkm_name + "✨");
                 if (!member.roles.cache.has('1113904028414398585')) member.roles.add(member.guild.roles.cache.get('1113904028414398585'));// à modifier
             } else {
-                member.setNickname(member.user.username + " | " + pkm_name);
+                member.setNickname(displayName + " | " + pkm_name);
                 if (member.roles.cache.has('1113904028414398585')) member.roles.remove(member.roles.cache.get('1113904028414398585')); // à modifier
             }
 

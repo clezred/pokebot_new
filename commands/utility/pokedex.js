@@ -9,11 +9,15 @@ module.exports = {
             option.setName('id')
                 .setDescription('Numéro (id) du Pokémon')
                 .setRequired(false)
+                .setMaxValue(1010)
+                .setMinValue(1)
         )
         .addStringOption(option => 
             option.setName('nom')
                 .setDescription('Nom du Pokémon')
                 .setRequired(false)
+                .setMaxLength(20)
+                .setMinLength(1)
         ),
 	async execute(interaction) {
 
@@ -21,7 +25,7 @@ module.exports = {
         let pkmName = interaction.options.getString('nom') ?? null;
 
         if (id != null) {
-            if (id > 0 && id < 906) {
+            if (id > 0 && id < 1011) {
                 await interaction.reply({embeds: [pokedexID(id-1)]});
             } else {
                 await interaction.reply({content: "L'id de Pokémon fourni n'est pas valide, il doit être compris entre 1 et 905.", ephemeral: true});
@@ -34,7 +38,7 @@ module.exports = {
                 await interaction.reply({content: "Le nom de Pokémon fourni n'est pas valide, réessaie en vérifiant son orthographe.", ephemeral: true})
             }
         } else {
-            await interaction.reply({content: "Tu as mal utilisé cette commande, réfères-toi à l'aide disponible via la commande `/help pokedex`", ephemeral: true})
+            await interaction.reply({content: "Tu as mal utilisé cette commande, réfères-toi à l'aide disponible via la commande `/help` et sélectionne l'aide relative à la commande `/pokedex`", ephemeral: true})
         }
 	},
 };
