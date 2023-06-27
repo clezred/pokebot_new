@@ -101,7 +101,7 @@ function pokedexName(name) {
         }
     }
 
-    if (i > 1010) return null;
+    if (i > 1009) return null;
 
     return pokedexID(i);
 }

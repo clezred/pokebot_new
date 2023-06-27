@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const Papa = require('papaparse');
 const path = require('node:path');
 const { Client, GatewayIntentBits, Partials, ActivityType, Collection, Events } = require('discord.js');
-const { token } = require('./config.json');
+const { token, guildId, logsChannelId, shinyRoleId, welcomeChannelId, servCountChId } = require('./config.json');
 const { random } = require('./assets/js/random.js')
 const pkmGames = require('./assets/json/pkmgames.json')
 
@@ -65,25 +65,31 @@ let vanishMode = false;
 let pkmGameActivity;
 let activityInterval;
 
+let guilds;
 let mainGuild; 
 let logsChannel;
+let servCountCh;
 
 var pokeliste = Papa.parse(fs.readFileSync('./assets/csv/pokeliste.csv', "utf-8"), {encoding: "utf-8"})
 
 client.login(token);
 
 client.on(Events.ClientReady, () => {
-    mainGuild = client.guilds.cache.get('759781274105151488') // à modifier
-    logsChannel = mainGuild.channels.cache.get('1113867865314046112') // à modifier
+    mainGuild = client.guilds.cache.get(guildId);
+    logsChannel = mainGuild.channels.cache.get(logsChannelId);
+    welcChannel = mainGuild.channels.cache.get(welcomeChannelId);
+    servCountCh = mainGuild.channels.cache.get(servCountChId);
 
     logsChannel.send(`Le bot est prêt en tant que ${client.user.tag}!`);
 
     pkmGameActivity = random(1,38);
     updateBotStatus();
+    updateStats();
 
     activityInterval = setInterval(() => {
         pkmGameActivity = random(1,38);
         updateBotStatus();
+        updateStats();
     }, 600000);
 });
 
@@ -124,17 +130,17 @@ client.on(Events.MessageCreate, async (message) => {
                 logsChannel.send('Le bot a quitté le mode vanish.');
             }
             updateBotStatus();
-        }
-
+        } else
+        // SERVERS
         if (message.content.toUpperCase().startsWith('-SERVERS')) {
             await client.guilds.fetch();
 
-            const guilds = client.guilds.cache;
+            guilds = client.guilds.cache;
 
             let desc = "`" + guilds.size + " serveurs`";
 
             guilds.forEach(guild => {
-                desc += "\n- " + guild.name + " | " + guild.id;
+                desc += "\n- " + guild.name + " | " + guild.id + " | " + guild.memberCount;
             });
 
             message.reply({embeds: [{
@@ -150,7 +156,7 @@ client.on(Events.MessageCreate, async (message) => {
 });
 
 client.on(Events.InteractionCreate, async interaction => {
-    
+
 	if (!interaction.isChatInputCommand()) return;
 
 	const command = interaction.client.commands.get(interaction.commandName);
@@ -184,21 +190,32 @@ client.on(Events.InteractionCreate, async interaction => {
 
 client.on(Events.GuildMemberAdd, member => {
 
-    if (member.guild.id === '759781274105151488') { // à modifier
+    if (member.guild.id === guildId) {
         let pkID = random(1,905);
         let shiny = random(1,4096);//4096
         let pkm = pokeliste.data[pkID];
         let pkm_name = pkm[2]; 
         if (shiny == 1) {
             member.setNickname(member.user.username + " | " + pkm_name + "✨");
-            member.roles.add(member.guild.roles.cache.get('1113904028414398585'));// à modifier
+            member.roles.add(member.guild.roles.cache.get(shinyRoleId));
             pkm_name += " *shiny*";
         } else {
             member.setNickname(member.user.username + " | " + pkm_name);
         }
-        logsChannel.send('Un **' + pkm_name + '** sauvage est apparu !\nBienvenue à toi <@' + member.user.id + "> !")
+        welcChannel.send('Un **' + pkm_name + '** sauvage est apparu !\nBienvenue à toi <@' + member.user.id + "> !")
     }
-  })
+})
+
+client.on(Events.GuildCreate, async guild => {
+    await guild.fetch()
+    logsChannel.send(`PokéBot ajouté au serveur ${guild.name} qui compte ${guild.memberCount} membres.`)
+    updateStats();
+})
+
+client.on(Events.GuildDelete, guild => {
+    logsChannel.send(`PokéBot retiré du serveur ${guild.name} qui compte ${guild.memberCount} membres.`)
+    updateStats();
+})
 
 function updateBotStatus() {
     let name = pkmGames[pkmGameActivity];
@@ -221,3 +238,10 @@ function updateBotStatus() {
     });
 }
 
+async function updateStats() {
+    await client.guilds.fetch();
+    
+    guilds = client.guilds.cache;
+
+    servCountCh.setName('🌐 ' + guilds.size + ' Serveurs').catch(console.error)
+}

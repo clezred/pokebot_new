@@ -5,7 +5,7 @@ const { random } = require('../../assets/js/random.js');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('team')
-		.setDescription('Renvoie une équipe de Pokémons aléatoire'),
+		.setDescription('Renvoie une équipe aléatoire de 6 Pokémons'),
     
 	async execute(interaction) {
         let pkms = [];

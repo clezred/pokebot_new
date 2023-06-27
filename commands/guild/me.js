@@ -1,7 +1,9 @@
-const { SlashCommandBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, Events } = require('discord.js');
+const { SlashCommandBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType, DiscordjsErrorCodes } = require('discord.js');
 const { random } = require('../../assets/js/random');
+const { shinyRoleId } = require('../../config.json')
 const fs = require('node:fs');
 const Papa = require('papaparse');
+const { error } = require('node:console');
 
 var pokeliste = Papa.parse(fs.readFileSync('./assets/csv/pokeliste.csv', "utf-8"), {encoding: "utf-8"});
 
@@ -9,7 +11,7 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('me')
 		.setDescription('Te permet d\'obtenir le Pokémon qui te repésente sur le serveur du PokéBot !'),
-        
+
 	async execute(interaction) {
 		const button = new ButtonBuilder()
             .setLabel('Obtenir mon Pokémon')
@@ -23,38 +25,44 @@ module.exports = {
             content: 'Souhaites-tu obtenir le Pokémon qui te représente ?\nCela affectera ton pseudo sur le serveur.', 
             components: [row],
             ephemeral: true
-        })
+        }).then(async message => {
+            await message.awaitMessageComponent({
+                filter: (subinteraction) => subinteraction.customId === 'get-my-pokemon' && subinteraction.user.id === interaction.user.id,
+                componentType: ComponentType.Button,
+                time: 15000,
+                dispose: true
+            }).then(async subinteraction => {
 
-        const client = interaction.client;
+                let member = interaction.member;
 
-        client.on(Events.InteractionCreate, async subinteraction => {
-            if (subinteraction.user.id != interaction.user.id) return;
+                let pkID = random(1,1010);
+                let shiny = random(1,4096);//4096
+                let pkm = pokeliste.data[pkID];
+                let pkm_name = pkm[2];
+                let displayName = member.user.username;
+                if (displayName.length > (32 - (pkm_name.length + 4))) {
+                    displayName = displayName.substring(0, (32 - (pkm_name.length + 7))) + "...";
+                }
 
-            if (subinteraction.isChatInputCommand() && subinteraction.commandName == 'me') interaction.deleteReply();
+                if (shiny == 1) {
+                    member.setNickname(displayName + " | " + pkm_name + "✨");
+                    if (!member.roles.cache.has(shinyRoleId)) member.roles.add(member.guild.roles.cache.get(shinyRoleId));
+                } else {
+                    member.setNickname(displayName + " | " + pkm_name);
+                    if (member.roles.cache.has(shinyRoleId)) member.roles.remove(member.roles.cache.get(shinyRoleId));
+                }
 
-            if (!subinteraction.isButton()) return;
+                await subinteraction.deferUpdate();
 
-            const member = interaction.guild.members.cache.get(subinteraction.user.id);
+                await interaction.deleteReply();
 
-            let pkID = random(1,1010);
-            let shiny = random(1,4096);//4096
-            let pkm = pokeliste.data[pkID];
-            let pkm_name = pkm[2];
-            let displayName = member.user.username;
-            if (displayName.length > (32 - (pkm_name.length + 4))) {
-                displayName = displayName.substring(0, (32 - (pkm_name.length + 7))) + "..."
-            }
-
-            if (shiny == 1) {
-                member.setNickname(displayName + " | " + pkm_name + "✨");
-                if (!member.roles.cache.has('1113904028414398585')) member.roles.add(member.guild.roles.cache.get('1113904028414398585'));// à modifier
-            } else {
-                member.setNickname(displayName + " | " + pkm_name);
-                if (member.roles.cache.has('1113904028414398585')) member.roles.remove(member.roles.cache.get('1113904028414398585')); // à modifier
-            }
-
-            subinteraction.deferUpdate();
-            interaction.deleteReply();
+            }).catch(error => {
+                if (error.code === DiscordjsErrorCodes.InteractionCollectorError) {
+                    interaction.deleteReply().catch(console.error);
+                } else {
+                    console.error(error);
+                }
+            })
         })
 	},
 };
