@@ -80,7 +80,7 @@ client.on(Events.ClientReady, () => {
     welcChannel = mainGuild.channels.cache.get(welcomeChannelId);
     servCountCh = mainGuild.channels.cache.get(servCountChId);
 
-    logsChannel.send(`Le bot est prêt en tant que ${client.user.tag}!`);
+    logsChannel.send(`PokéBot en ligne !`);
 
     pkmGameActivity = random(1,38);
     updateBotStatus();
@@ -149,8 +149,44 @@ client.on(Events.MessageCreate, async (message) => {
                 },
                 color: 0xFFFF00,
                 description: desc
-            }], ephemeral: true});
+            }]});
 
+        } else
+        // SERVER INFO
+        if (message.content.toUpperCase().startsWith('-SERVER ') && message.content.substring(8) != "") {
+            await client.guilds.fetch();
+
+            let guild = client.guilds.cache.get(message.content.substring(8));
+
+            if (guild == undefined) return;
+
+            let owner = await guild.fetchOwner();
+
+            await guild.channels.fetch();
+
+            let channelsName = "";
+
+            guild.channels.cache.forEach(ch => {
+                channelsName += "`" + ch.name + "` ";
+            })
+
+            if (channelsName.length > 1024) channelsName = channelsName.substring(0,1020) + "..."
+
+            message.reply({embeds: [{
+                author: {
+                    name: guild.name
+                },
+                color: 0xFFFF00,
+                description: guild.memberCount + " members",
+                thumbnail: {url: guild.iconURL()},
+                fields: [{
+                    name: "Owner :",
+                    value: "- " + owner.user.username + "\n- " + owner.user.id
+                },{
+                    name: "Channels :",
+                    value: channelsName
+                }]
+            }]});
         }
      }
 });
@@ -194,13 +230,18 @@ client.on(Events.GuildMemberAdd, member => {
         let pkID = random(1,905);
         let shiny = random(1,4096);//4096
         let pkm = pokeliste.data[pkID];
-        let pkm_name = pkm[2]; 
+        let pkm_name = pkm[2];
+        let displayName = member.user.username;
+        if (displayName.length > (32 - (pkm_name.length + 4))) {
+            displayName = displayName.substring(0, (32 - (pkm_name.length + 7))) + "...";
+        }
+
         if (shiny == 1) {
-            member.setNickname(member.user.username + " | " + pkm_name + "✨");
+            member.setNickname(displayName + " | " + pkm_name + "✨");
             member.roles.add(member.guild.roles.cache.get(shinyRoleId));
             pkm_name += " *shiny*";
         } else {
-            member.setNickname(member.user.username + " | " + pkm_name);
+            member.setNickname(displayName + " | " + pkm_name);
         }
         welcChannel.send('Un **' + pkm_name + '** sauvage est apparu !\nBienvenue à toi <@' + member.user.id + "> !")
     }

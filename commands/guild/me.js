@@ -3,7 +3,6 @@ const { random } = require('../../assets/js/random');
 const { shinyRoleId } = require('../../config.json')
 const fs = require('node:fs');
 const Papa = require('papaparse');
-const { error } = require('node:console');
 
 var pokeliste = Papa.parse(fs.readFileSync('./assets/csv/pokeliste.csv', "utf-8"), {encoding: "utf-8"});
 
