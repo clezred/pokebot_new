@@ -1,6 +1,7 @@
 const { SlashCommandBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType, DiscordjsErrorCodes } = require('discord.js');
 const { random } = require('../../assets/js/random');
-const { shinyRoleId } = require('../../config.json')
+const { getPsqlClient } = require('../../index.js')
+const { shinyRoleId } = require('../../config.json');
 const fs = require('node:fs');
 const Papa = require('papaparse');
 
@@ -12,6 +13,43 @@ module.exports = {
 		.setDescription('Te permet d\'obtenir le Pokémon qui te repésente sur le serveur du PokéBot !'),
 
 	async execute(interaction) {
+
+        let result;
+
+        const psqlClient = await getPsqlClient();
+
+        await psqlClient.query('SELECT * FROM pbsrvmembers')
+            .then((res) => {
+                result = res.rows;
+            })
+            .catch((error) => console.error(error));
+        
+        let ligne;
+
+        await result.forEach(row => {
+            if (row.user_id == interaction.user.id) {
+                ligne = row 
+            }
+        });
+
+        let now = new Date();
+
+        if (ligne != undefined) {
+            let last = new Date(ligne.last_me);
+            const differenceInTime = now.getTime() - last.getTime();
+            const differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
+            if (differenceInDays < 7) {
+                interaction.reply({content: 'Tu as déjà utilisé cette commande il y a moins de 7 jours, il te faut encore attendre ' + (7 - differenceInDays) + ' jour(s) avant de pouvoir obtenir un nouveau Pokémon.', ephemeral: true})
+                return;
+            } else {
+                await psqlClient.query(`UPDATE pbsrvmembers SET last_me = '${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}' WHERE user_id = '${interaction.user.id}'`)
+                    .catch((error) => console.error(error));
+            }
+        } else {
+            await psqlClient.query(`INSERT INTO pbsrvmembers VALUES ('${interaction.user.id.toString()}', '${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}')`)
+                .catch((error) => console.error(error));
+        }
+
 		const button = new ButtonBuilder()
             .setLabel('Obtenir mon Pokémon')
             .setCustomId('get-my-pokemon')

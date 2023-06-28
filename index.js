@@ -3,8 +3,10 @@ const Papa = require('papaparse');
 const path = require('node:path');
 const { Client, GatewayIntentBits, Partials, ActivityType, Collection, Events } = require('discord.js');
 const { token, guildId, logsChannelId, shinyRoleId, welcomeChannelId, servCountChId } = require('./config.json');
-const { random } = require('./assets/js/random.js')
-const pkmGames = require('./assets/json/pkmgames.json')
+const { Client: PostgresClient } = require('pg');
+const { dbUser, dbHost, dbName, dbPasswd, dbPort } = require('./config.json');
+const { random } = require('./assets/js/random.js');
+const pkmGames = require('./assets/json/pkmgames.json');
 
 const client = new Client({ 
     intents: [
@@ -39,6 +41,33 @@ const client = new Client({
     ]
 });
 
+const psqlClient = new PostgresClient({
+    user: dbUser,
+    host: dbHost,
+    database: dbName,
+    password: dbPasswd,
+    port: dbPort,
+})
+
+async function dbConnect() {
+    await psqlClient.connect()
+        .then(() => {
+            console.log('Connecté à la base de données PostgreSQL');
+        })
+        .catch((err) => {
+            console.error('Erreur lors de la connexion à la base de données', err);
+            client.destroy()
+        });
+}
+
+dbConnect();
+
+function getPsqlClient() {
+    return psqlClient;
+}
+
+module.exports = { getPsqlClient }
+
 client.commands = new Collection();
 
 const foldersPath = path.join(__dirname, 'commands');
@@ -70,17 +99,21 @@ let mainGuild;
 let logsChannel;
 let servCountCh;
 
+let intVars = {};
+
 var pokeliste = Papa.parse(fs.readFileSync('./assets/csv/pokeliste.csv', "utf-8"), {encoding: "utf-8"})
 
 client.login(token);
 
-client.on(Events.ClientReady, () => {
+client.on(Events.ClientReady, async () => {
     mainGuild = client.guilds.cache.get(guildId);
     logsChannel = mainGuild.channels.cache.get(logsChannelId);
     welcChannel = mainGuild.channels.cache.get(welcomeChannelId);
     servCountCh = mainGuild.channels.cache.get(servCountChId);
 
     logsChannel.send(`PokéBot en ligne !`);
+
+    refreshIntVars();
 
     pkmGameActivity = random(1,38);
     updateBotStatus();
@@ -99,9 +132,11 @@ client.on(Events.MessageCreate, async (message) => {
         // ARRET COMPLET
         if (message.content.toUpperCase().startsWith('-STOP')) {
             clearInterval(activityInterval);
-            logsChannel.send('Bot arrêté').then(() => {
-               client.destroy();
+            logsChannel.send('Bot arrêté').then(async () => {
+                client.destroy();
+                (await psqlClient).end();
             })
+            
         } else
         // MAINTENANCE
         if (message.content.toUpperCase().startsWith('-MAINTENANCE')) {
@@ -207,9 +242,11 @@ client.on(Events.InteractionCreate, async interaction => {
         return;
     }
 
-    if (interaction.commandName == 'me' && interaction.user.id == interaction.guild.ownerId) {
-        interaction.reply({content: "Je n'ai pas le droit d'agir sur le propriétaire du serveur, je ne peux donc pas t'assigner un Pokémon.", ephemeral: true});
-        return;
+    if (interaction.commandName == 'me') {
+        if (interaction.user.id == interaction.guild.ownerId) {
+            interaction.reply({content: "Je n'ai pas le droit d'agir sur le propriétaire du serveur, je ne peux donc pas t'assigner un Pokémon.", ephemeral: true});
+            return;
+        }
     }
 
 	try {
@@ -285,4 +322,13 @@ async function updateStats() {
     guilds = client.guilds.cache;
 
     servCountCh.setName('🌐 ' + guilds.size + ' Serveurs').catch(console.error)
+}
+
+async function refreshIntVars() {
+    await psqlClient.query('SELECT * FROM intvars')
+        .then((res) => {
+            res.rows.forEach(row => {
+                intVars[row.intvar_id] = row.value;
+            })
+        }).catch((error) => console.error(error));
 }
