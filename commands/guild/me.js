@@ -16,7 +16,7 @@ module.exports = {
 
         let result;
 
-        const psqlClient = await getPsqlClient();
+        const psqlClient = getPsqlClient();
 
         await psqlClient.query('SELECT * FROM pbsrvmembers')
             .then((res) => {

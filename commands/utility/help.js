@@ -23,7 +23,7 @@ module.exports = {
 
 		const pkbServField = {
 			name:"PokéBot Support Server",
-			value: "Rejoins le [Serveur Discord Officiel](https://discord.gg/FrMYzXn48V) du PokéBot pour plus d'aide et plus d'informations ou même pour nous partager tes suggestions pour le bot. (Il y a même des fonctionalités excusives !)"
+			value: "Rejoins le [Serveur Discord Officiel](https://discord.gg/FrMYzXn48V) du PokéBot pour plus d'aide, plus d'informations ou pour nous partager tes suggestions pour le bot. (Il y a même des fonctionalités excusives !)"
 		}
 
 		if (choice === 'basic') {

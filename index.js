@@ -88,9 +88,6 @@ for (const folder of commandFolders) {
 	}
 }
 
-let maintenanceMode = false;
-let vanishMode = false;
-
 let pkmGameActivity;
 let activityInterval;
 
@@ -100,6 +97,10 @@ let logsChannel;
 let servCountCh;
 
 let intVars = {};
+let boolVars = {
+    "maintenance": false,
+    "vanish": false
+};
 
 var pokeliste = Papa.parse(fs.readFileSync('./assets/csv/pokeliste.csv', "utf-8"), {encoding: "utf-8"})
 
@@ -113,7 +114,8 @@ client.on(Events.ClientReady, async () => {
 
     logsChannel.send(`PokéBot en ligne !`);
 
-    refreshIntVars();
+    await refreshIntVars();
+    await refreshBoolVars();
 
     pkmGameActivity = random(1,38);
     updateBotStatus();
@@ -140,12 +142,14 @@ client.on(Events.MessageCreate, async (message) => {
         } else
         // MAINTENANCE
         if (message.content.toUpperCase().startsWith('-MAINTENANCE')) {
-            maintenanceMode = !maintenanceMode;
-            if (maintenanceMode && vanishMode) {
-                vanishMode = !vanishMode;
+            boolVars.maintenance = !boolVars.maintenance;
+            psqlClient.query(`UPDATE boolvars SET value = ${boolVars.maintenance} WHERE boolvar_id = 'maintenance'`);
+            if (boolVars.maintenance && boolVars.vanish) {
+                boolVars.vanish = !boolVars.vanish;
+                psqlClient.query(`UPDATE boolvars SET value = ${boolVars.vanish} WHERE boolvar_id = 'vanish'`);
                 logsChannel.send('Le bot a quitté le mode vanish');
             }
-            if (maintenanceMode) {
+            if (boolVars.maintenance) {
                 logsChannel.send('Le bot est en mode maintenance.');
             } else {
                 logsChannel.send('Le bot a quitté le mode maintenance.');
@@ -154,12 +158,14 @@ client.on(Events.MessageCreate, async (message) => {
         } else 
         // VANISH
         if (message.content.toUpperCase().startsWith('-VANISH')) {
-            vanishMode = !vanishMode;
-            if (maintenanceMode && vanishMode) {
-                maintenanceMode = !maintenanceMode;
+            boolVars.vanish = !boolVars.vanish;
+            psqlClient.query(`UPDATE boolvars SET value = ${boolVars.vanish} WHERE boolvar_id = 'vanish'`);
+            if (boolVars.maintenance && boolVars.vanish) {
+                boolVars.maintenance = !boolVars.maintenance;
+                psqlClient.query(`UPDATE boolvars SET value = ${boolVars.maintenance} WHERE boolvar_id = 'maintenance'`);
                 logsChannel.send('Le bot a quitté le mode maintenance.');
             }
-            if (vanishMode) {
+            if (boolVars.vanish) {
                 logsChannel.send('Le bot est en mode vanish.');
             } else {
                 logsChannel.send('Le bot a quitté le mode vanish.');
@@ -237,7 +243,7 @@ client.on(Events.InteractionCreate, async interaction => {
 		return;
 	}
 
-    if ((maintenanceMode || vanishMode) && interaction.user.id != '285400340696793090' && interaction.commandName != 'help') {
+    if ((boolVars.maintenance || boolVars.vanish) && interaction.user.id != '285400340696793090' && interaction.commandName != 'help') {
         interaction.reply({content: "Le PokéBot est indisponible pour le moment. Pour plus d'aide utilise la commande `/help`", ephemeral: true});
         return;
     }
@@ -300,9 +306,9 @@ function updateBotStatus() {
     let activity = ActivityType.Playing;
     let status = 'online';
 
-    if (vanishMode) {
+    if (boolVars.vanish) {
         status = 'invisible'
-    } else if (maintenanceMode) {
+    } else if (boolVars.maintenance) {
         name = 'Maintenance'
         status = 'dnd'
     }
@@ -329,6 +335,15 @@ async function refreshIntVars() {
         .then((res) => {
             res.rows.forEach(row => {
                 intVars[row.intvar_id] = row.value;
+            })
+        }).catch((error) => console.error(error));
+}
+
+async function refreshBoolVars() {
+    await psqlClient.query('SELECT * FROM boolvars')
+        .then((res) => {
+            res.rows.forEach(row => {
+                boolVars[row.boolvar_id] = row.value;
             })
         }).catch((error) => console.error(error));
 }
