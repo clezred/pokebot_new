@@ -40,7 +40,7 @@ module.exports = {
 					guildCMDs += "\n- `/news-channel`";
 				}
 				if (interaction.guildId == guildId && interaction.member.permissions.has(PermissionFlagsBits.Administrator)) {
-					guildCMDs += "\n - `/publish`";
+					guildCMDs += "\n- `/publish`";
 				}
 			}
 
@@ -153,14 +153,14 @@ module.exports = {
 				embeds: [{
 					title: "Aide commande Me",
 					color: 0xFFFF00,
-					description: "**Cette commande est exclusive au [Serveur Discord Officiel du PokéBot](https://discord.gg/FrMYzXn48V).**",
+					description: "*Cette commande est exclusive au [Serveur Discord Officiel du PokéBot](https://discord.gg/FrMYzXn48V).*",
 					fields: [{
 							name: "Utilisation :",
 							value: "```/me```",
 							inline: false
 						},{
 							name: "Description :",
-							value: "Cette commande te permet de changer, aléatoirement, le Pokémon qui t'as précédemment été attribué soit quand tu es arrivé sur le serveur, soit la dernière fois que tu as utilisé la commande. Elle est utilisable 1 fois par semaine et par utilisateur et tu peux avoir la chance de tomber sur un shiny ! (1 chance sur 4096)",
+							value: "Cette commande te permet de changer, aléatoirement, le Pokémon qui t'as précédemment été attribué soit quand tu es arrivé sur le serveur, soit la dernière fois que tu as utilisé la commande. Elle est utilisable 1 fois par semaine et par utilisateur et tu aura peut-être la chance de tomber sur un shiny ! (*1/4096*)",
 							inline: false
 						},{
 							name: "Exemple :",
@@ -177,7 +177,7 @@ module.exports = {
 				embeds: [{
 					title: "Aide commande News Channel",
 					color: 0xFFFF00,
-					description: "**Cette commande est réservée aux administrateurs**",
+					description: "*Cette commande est réservée aux administrateurs*",
 					fields: [{
 							name: "Utilisation :",
 							value: "```/news-channel ┬── add #channel\n              └── remove #channel```",
@@ -201,7 +201,7 @@ module.exports = {
 				embeds: [{
 					title: "Aide commande Publish",
 					color: 0xFFFF00,
-					description: "**Cette commande est réservée aux administrateurs du [Serveur Discord Officiel du PokéBot](https://discord.gg/FrMYzXn48V).**",
+					description: "*Cette commande est réservée aux administrateurs du [Serveur Discord Officiel du PokéBot](https://discord.gg/FrMYzXn48V).*",
 					fields: [{
 							name: "Utilisation :",
 							value: "```/publish {jsonFile}```",
