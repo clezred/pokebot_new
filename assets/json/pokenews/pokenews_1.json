@@ -1,0 +1,14 @@
+{
+    "content": "> # PokéNews n°1 :\n*Vendredi 30 Juin 2023*\n\nAjouts :\n- Commande `/pokequiz` : mini-jeu Pokémon (*voir `/help PokéQuiz`*)\n- Gestion des notifications sur le PokéBot Support Server avec un rôle-réaction\n\nModifications :\n- Commandes admin PokéBot transformées en commandes slash\n- Mise à jour de la commande `/help`\n- Mise à jour du features.md\n- Mise à jour des informations du PokéBot sur les sites de bots Discord",
+    "embeds:": [
+        {
+            "color": 16776960,
+            "fields": [
+                {
+                    "name":"PokéBot Support Server",
+                    "value": "Rejoins le [Serveur Discord Officiel](https://discord.gg/FrMYzXn48V) du PokéBot pour plus d'aide, plus d'informations ou pour nous partager tes suggestions pour le bot. (Il y a même des fonctionalités excusives !)"
+                }
+            ]
+        }
+    ]
+}

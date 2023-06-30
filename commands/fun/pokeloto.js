@@ -18,6 +18,6 @@ module.exports = {
 		const min = gen[option][0]
 		const max = gen[option][1]
 		const number = random(min,max);
-		await interaction.reply({embeds: [pokedexID(number)]});
+		await interaction.reply({embeds: [pokedexID(number-1)]});
 	},
 };

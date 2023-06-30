@@ -11,12 +11,13 @@ module.exports = {
             .addChoices(
                 {name: 'Pokédex', 	value: 'pokedex'},
                 {name: 'PokéLoto', 	value: 'pokeloto'},
-				{name: 'Team', 	value: 'team'},
-                //{name: 'PokéQuiz', 	value: 'pokequiz'},
+				{name: 'Team', 		value: 'team'},
+                {name: 'PokéQuiz', 	value: 'pokequiz'},
                 //{name: 'PokéParty', value: 'pokeparty'},
 				{name: 'News Channel', value: 'news-channel'},
-				{name: 'Publish', value: 'publish'},
-				{name: 'Me', 		value: 'me'}
+				{name: 'Publish', 	value: 'publish'},
+				{name: 'Me', 		value: 'me'},
+				{name: 'Pokébot', 	value: 'pokebot'}
             )
         ),
 		
@@ -40,7 +41,7 @@ module.exports = {
 					guildCMDs += "\n- `/news-channel`";
 				}
 				if (interaction.guildId == guildId && interaction.member.permissions.has(PermissionFlagsBits.Administrator)) {
-					guildCMDs += "\n- `/publish`";
+					guildCMDs += "\n- `/publish`\n- `/pokebot`";
 				}
 			}
 
@@ -51,7 +52,7 @@ module.exports = {
 					description: "**Présentation du PokéBot :**\nLe PokéBot est un bot Discord créé par [clezred](https://twitch.tv/clezred) et basé sur l'univers de Pokémon. Grâce à lui, tu pourras jouer à des mini-jeux et en apprendre plus sur les Pokémons !",
 					fields: [{
 							name: "Liste des commandes :",
-							value: "- `/help`\n- `/pokedex`\n- `/pokeloto`\n- `/team`" + guildCMDs,
+							value: "- `/help`\n- `/pokedex`\n- `/pokeloto`\n- `/team`\n- `/pokequiz`" + guildCMDs,
 							inline: false
 						},
 						pkbServField
@@ -103,24 +104,6 @@ module.exports = {
 						},{
 							name: "Exemple :",
 							value: "Pour obtenir aléatoirement un Pokémon tu peux utiliser :\n - `/pokeloto`\n- `/pokedex generation:1` (1ère génération)",
-							inline: false
-						},
-						pkbServField
-					],
-					footer: {text: "Aide demandée par " + interaction.user.username},
-					timestamp: new Date,
-				}],
-				ephemeral: true
-			})
-		} else if (choice === 'pokequiz') {
-			interaction.reply({
-				embeds: [{
-					title: "Aide commande PokéQuiz",
-					color: 0xFFFF00,
-					description: "",
-					fields: [{
-							name: "",
-							value: "",
 							inline: false
 						},
 						pkbServField
@@ -237,6 +220,51 @@ module.exports = {
 						},{
 							name: "Exemple :",
 							value: "Pour obtenir une équipe :\n - `/team`"
+						}
+					],
+					footer: {text: "Aide demandée par " + interaction.user.username},
+					timestamp: new Date,
+				}],
+				ephemeral: true
+			})
+		} else if (choice == 'pokequiz') {
+			interaction.reply({
+				embeds: [{
+					title: "Aide commande PokéQuiz",
+					color: 0xFFFF00,
+					description: "",
+					fields: [{
+							name: "Utilisation :",
+							value: "```/pokequiz```",
+							inline: false
+						},{
+							name: "Description :",
+							value: "Cette commande te permet de jouer au PokéQuiz ! Un jeu dans lequel tu devras, grâce à différents indices, retrouver le Pokémon correspondant à la description.",
+							inline: false
+						},{
+							name: "Exemple :",
+							value: "Pour commencer une partie :\n - `/team`"
+						}
+					],
+					footer: {text: "Aide demandée par " + interaction.user.username},
+					timestamp: new Date,
+				}],
+				ephemeral: true
+			})
+		} else if (choice == 'pokebot') {
+			interaction.reply({
+				embeds: [{
+					title: "Aide commande PokéBot",
+					color: 0xFFFF00,
+					description: "*Cette commande est réservée aux administrateurs du [Serveur Discord Officiel du PokéBot](https://discord.gg/FrMYzXn48V).*",
+					fields: [{
+							name: "Utilisation :",
+							value: "```/pokebot ┬── stop\n         ├── maintenance\n         ├── vanish\n         └── servers```",
+							inline: false
+						},{
+							name: "Description :",
+							value: "Cette commande permet aux administrateurs du PokéBot de faire différentes actions critiques.",
+							inline: false
 						}
 					],
 					footer: {text: "Aide demandée par " + interaction.user.username},
