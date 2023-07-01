@@ -195,7 +195,7 @@ module.exports = {
             if (found) {
                 let successEmbed = {
                     title: "Victoire PokéQuiz !",
-                    description: "Pokémon à trouver : " + pkm[2] + "\nNombre d'essais : " + tries + "\nNombre d'indices bonus utilisés : " + nbIndices,
+                    description: "Pokémon à trouver : " + pkm[2] + "\nNombre d'essais : " + tries + "/10\nNombre d'indices bonus utilisés : " + nbIndices + "/5",
                     footer: {text: "Victoire de " + interaction.user.username},
                     timestamp: new Date,
                     color: 0x00FF00

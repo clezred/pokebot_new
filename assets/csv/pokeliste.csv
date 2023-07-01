@@ -78,8 +78,8 @@
 78,1,Galopa,Feu,,,2,Niveau 1,"Doté d'un esprit de compétition, il poursuit toute créature rapide pour faire la course.",
 79,1,Ramoloss,Eau,Psy,,2,Base,"Très lent et endormi, il lui faut 5 secondes pour ressentir la douleur d'une attaque.",
 80,1,Flagadoss,Eau,Psy,1,2,Niveau 1,Le Kokiyas attaché à la queue de ce Pokémon se nourrit des restes de son hôte.,
-81,1,Magnéti,Electrique,Métal,,,Base,Il contrôle la gravité pour pouvoir voler. il attaque avec des Cage-éclair.,
-82,1,Magnéton,Electrique,Métal,,,Niveau 1,Il émet un signal radio étrange. Sa présence augmente la température de 1 degré dans un rayon de 1000 m.,
+81,1,Magnéti,Electrique,Acier,,,Base,Il contrôle la gravité pour pouvoir voler. il attaque avec des Cage-éclair.,
+82,1,Magnéton,Electrique,Acier,,,Niveau 1,Il émet un signal radio étrange. Sa présence augmente la température de 1 degré dans un rayon de 1000 m.,
 83,1,Canarticho,Normal,Vol,,2,Base,Il utilise l'oignon qu'il a dans la bouche comme une épée d'acier.,
 84,1,Doduo,Normal,Vol,,,Base,Cet oiseau vole très mal mais court très vite. Il laisse de gigantesques empreintes de pas.,
 85,1,Dodrio,Normal,Vol,,,Niveau 1,Il élabore des plans complexes avec ses trois cerveaux. Une de ses têtes reste toujours éveillée.,
@@ -202,14 +202,14 @@
 202,2,Qulbutoké,Psy,,,,Niveau 1,"Il déteste la lumière. S'il est attaqué, il se gonfle pour riposter avec plus de violence.",
 203,2,Girafarig,Normal,Psy,,,Base,"Sa queue possède un cerveau. Si vous vous en approchez, il vous sentira et vous mordra.",
 204,2,Pomdepik,Insecte,,,,Base,Il renforce sa carapace en y ajoutant des écorces d'arbre. Il devient alors plus lourd.,
-205,2,Foretress,Insecte,Métal,,,Niveau 1,Son corps est protégé par une énorme carapace. Ce qui se trouve sous cette armure est un mystère.,
+205,2,Foretress,Insecte,Acier,,,Niveau 1,Son corps est protégé par une énorme carapace. Ce qui se trouve sous cette armure est un mystère.,
 206,2,Insolourdo,Normal,,,,Base,Il s'enfuit en creusant à reculons dans le sol avec sa queue dès qu'un ennemi le repère.,
 207,2,Scorplane,Sol,Vol,,,Base,Il vole droit vers le visage de sa cible effrayée et s'y accroche pour lui injecter son poison.,
-208,2,Steelix,Métal,Sol,1,,Niveau 1,Son corps a été compressé sous la terre. Il est devenu plus résistant que le diamant.,
+208,2,Steelix,Acier,Sol,1,,Niveau 1,Son corps a été compressé sous la terre. Il est devenu plus résistant que le diamant.,
 209,2,Snubbull,Fée,,,,Base,"Bien qu'il ait l'air menaçant, il est gentil et très affectueux. Il est très populaire chez les femmes.",
 210,2,Granbull,Fée,,,,Niveau 1,"Il est en fait très timide et un peu hésitant. S'il est attaqué, il se défend avec énergie.",
 211,2,Qwilfish,Eau,Poison,,2,Base,"Pour tirer ses dards empoisonnés, il gonfle son corps en buvant 10 litres d’eau subitement.",
-212,2,Cizayox,Insecte,Métal,1,,Niveau 1,Il effraie l'ennemi en agitant ses pinces en forme d'œil et donne ainsi l'impression d'avoir 3 têtes.,
+212,2,Cizayox,Insecte,Acier,1,,Niveau 1,Il effraie l'ennemi en agitant ses pinces en forme d'œil et donne ainsi l'impression d'avoir 3 têtes.,
 213,2,Caratroc,Insecte,Roche,,,Base,Les baies qu'il stocke dans sa coquille se décomposent et deviennent un liquide gluant.,
 214,2,Scarhino,Insecte,Combat,1,,Base,Ce Pokémon puissant attaque avec ses cornes sous le ventre de ses ennemis pour les soulever ensuite.,
 215,2,Farfuret,Ténèbres,Glace,,,Base,"Ses griffes sont cachées dans ses pattes. S'il est attaqué, il les sort pour frapper ses ennemis.",
@@ -224,7 +224,7 @@
 224,2,Octillery,Eau,,,,Niveau 1,Il capture ses ennemis avec ses tentacules et les écrase ensuite avec sa tête dure comme la pierre.,
 225,2,Cadoizo,Glace,Vol,,,Base,Il transporte de la nourriture toute la journée. Il porte secours aux égarés en leur donnant à manger.,
 226,2,Démanta,Eau,Vol,,,Niveau 1,Il nage avec majesté. Il ne se soucie pas si un Rémoraid est attaché à son corps.,
-227,2,Airmure,Métal,Vol,,,Base,Ses ailes sont en fait légères et creuses. Il vole facilement et peut atteindre de très hautes altitudes.,
+227,2,Airmure,Acier,Vol,,,Base,Ses ailes sont en fait légères et creuses. Il vole facilement et peut atteindre de très hautes altitudes.,
 228,2,Malosse,Ténèbres,Feu,,,Base,Il communique en produisant différents cris avec ses semblables ou quand il poursuit une proie.,
 229,2,Démolosse,Ténèbres,Feu,1,,Niveau 1,Les blessures provoquées par son souffle de flamme sont permanentes et la douleur ne s'en va jamais.,
 230,2,Hyporoi,Eau,Dragon,,,Niveau 2,On dit qu'il se cache dans les grottes marines. Il peut créer des tourbillons en baillant.,
@@ -300,10 +300,10 @@
 300,3,Skitty,Normal,,,,Base,"Ce Pokémon a pris l'habitude de pourchasser les objets mobiles qui le fascinent. On sait qu'il court souvent après sa queue, jusqu'à ce qu'il ait la tête qui tourne.",
 301,3,Delcatty,Normal,,,,Niveau 1,"Plutôt que d'avoir un endroit bien à lui, il préfère chercher des endroits confortables et s'y reposer. Ce Pokémon devient actif à la tombée de la nuit.",
 302,3,Ténéfix,Ténèbres,Spectre,,,Base,"Ce Pokémon se nourrit de pierres précieuses. Dans les ténèbres, ses yeux brillent du reflet des joyaux.",
-303,3,Mysdibule,Métal,Fée,1,,Base,Ses mâchoires géantes sont en fait ce qui reste de 2 cornes en acier qui se sont transformées. Il attire ses proies avec son air amical avant de les avaler.,
-304,3,Galekid,Métal,Roche,,,Base,"Il est recouvert d'une armure en acier. Quand il évolue, il en revêt une nouvelle et abandonne l'ancienne. Celle-ci est très recherchée par l'industrie sidérurgique.",
-305,3,Galegon,Métal,Roche,,,Niveau 1,Ce Pokémon adoucit son corps d'acier en buvant une eau minérale jusqu'à ce qu'il soit tout boursouflé. Il fait son nid près des sources d'eau minérale riches en nutriments.,
-306,3,Galeking,Métal,Roche,1,,Niveau 2,Sa corne de fer grandit doucement au fil du temps et peut servir à deviner son âge. Il conserve fièrement les marques sur son armure comme souvenir de ses combats.,
+303,3,Mysdibule,Acier,Fée,1,,Base,Ses mâchoires géantes sont en fait ce qui reste de 2 cornes en acier qui se sont transformées. Il attire ses proies avec son air amical avant de les avaler.,
+304,3,Galekid,Acier,Roche,,,Base,"Il est recouvert d'une armure en acier. Quand il évolue, il en revêt une nouvelle et abandonne l'ancienne. Celle-ci est très recherchée par l'industrie sidérurgique.",
+305,3,Galegon,Acier,Roche,,,Niveau 1,Ce Pokémon adoucit son corps d'acier en buvant une eau minérale jusqu'à ce qu'il soit tout boursouflé. Il fait son nid près des sources d'eau minérale riches en nutriments.,
+306,3,Galeking,Acier,Roche,1,,Niveau 2,Sa corne de fer grandit doucement au fil du temps et peut servir à deviner son âge. Il conserve fièrement les marques sur son armure comme souvenir de ses combats.,
 307,3,Méditikka,Combat,Psy,,,Base,"Il médite sans s'arrêter plusieurs heures par jour. Grâce à cette discipline, il est maintenant capable de léviter par la force de son esprit.",
 308,3,Charmina,Combat,Psy,1,,Niveau 1,"Grâce à sa pratique du yoga, ce Pokémon est capable de prédire les actions de ses ennemis. Quand il se bat, il donne l'impression d'être en train de danser.",
 309,3,Dynavolt,Electrique,,,,Base,"Il génère de l'électricité en utilisant la friction de l'air. Les saisons particulièrement sèches, son corps entier crée de violentes gerbes d'étincelles.",
@@ -371,18 +371,18 @@
 371,3,Draby,Dragon,,,,Base,Les muscles de ce petit Pokémon le rendent très puissant. Ses coups de tête sont redoutables grâce à son crâne solide comme l’acier.,
 372,3,Drackhaus,Dragon,,,,Niveau 1,"En attendant son évolution, ce Pokémon mange très peu pour s'endurcir. Sa coquille se détache dès qu'il commence à évoluer.",
 373,3,Drattak,Dragon,Vol,1,,Niveau 2,"Après de longues années, sa structure cellulaire subit un grand changement pour permettre à ses ailes de pousser. Une fois énervé, il perd tout contrôle de lui-même.",
-374,3,Terhal,Métal,Psy,,,Base,Il utilise les ondes magnétiques pour communiquer avec ses semblables. Toutes les cellules de son corps sont aimantées.,
-375,3,Métang,Métal,Psy,,,Niveau 1,Les griffes sur ses bras renferment toute sa puissance destructrice. Elles déchirent le métal aussi facilement que de la soie. Il vole à 100 Km/h.,
-376,3,Métalosse,Métal,Psy,1,,Niveau 2,Les quatre cerveaux de ce Pokémon sont reliés par un réseau neuronal complexe. Ce Pokémon est plus intelligent qu'un superordinateur.,
+374,3,Terhal,Acier,Psy,,,Base,Il utilise les ondes magnétiques pour communiquer avec ses semblables. Toutes les cellules de son corps sont aimantées.,
+375,3,Métang,Acier,Psy,,,Niveau 1,Les griffes sur ses bras renferment toute sa puissance destructrice. Elles déchirent le métal aussi facilement que de la soie. Il vole à 100 Km/h.,
+376,3,Acierosse,Acier,Psy,1,,Niveau 2,Les quatre cerveaux de ce Pokémon sont reliés par un réseau neuronal complexe. Ce Pokémon est plus intelligent qu'un superordinateur.,
 377,3,Regirock,Roche,,,,Base,"Ce Pokémon est uniquement constitué de pierres et de rochers. Quand il endommage son corps au combat, il le régénère en ajoutant de nouveaux rochers.",L
 378,3,Regice,Glace,,,,Base,Tout son corps est constitué de glace provenant de l'Antarctique. Les scientifiques pensent que ce Pokémon s'est constitué pendant l'âge de glace.,L
-379,3,Registeel,Métal,,,,Base,"Son corps est plus dur que n'importe quel métal et est composé d'une substance mystérieuse. En plus d'être dur, il peut également raccourcir ou s'allonger.",L
+379,3,Registeel,Acier,,,,Base,"Son corps est plus dur que n'importe quel métal et est composé d'une substance mystérieuse. En plus d'être dur, il peut également raccourcir ou s'allonger.",L
 380,3,Latias,Dragon,Psy,1,,Base,Il n'existe qu'un faible nombre de ce Pokémon. Ils ne rentrent que rarement en contact avec les humains ou d'autres Pokémon et fuient dès qu'ils détectent un ennemi.,L
 381,3,Latios,Dragon,Psy,1,,Base,"Même en se cachant, il parvient à détecter les autres Pokémon et à sentir leurs émotions grâce à son don de télépathie. Il comprend le langage des humains.",L
 382,3,Kyogre,Eau,,P,,Base,Ce seraient les fortes pluies que peut invoquer ce Pokémon qui auraient rendu les océans si vastes. Il a le pouvoir de maîtriser l'eau.,L
 383,3,Groudon,Sol,,P,,Base,Ce Pokémon apparaît dans la mythologie comme le créateur de la terre. Il dort dans le magma souterrain et créerait des éruptions volcaniques en se réveillant.,L
 384,3,Rayquaza,Dragon,Vol,1,,Base,"Ce Pokémon a vécu pendant des centaines de millions d'années dans la couche d'ozone de l'atmosphère. Quand il vole, on croirait voir un météore.",L
-385,3,Jirachi,Métal,Psy,,,Base,"Selon la légende, ce Pokémon aurait le pouvoir d'exaucer les vœux. Quand il dort, il s'entoure d'une épaisse enveloppe de cristal pour se protéger de ses ennemis.",F
+385,3,Jirachi,Acier,Psy,,,Base,"Selon la légende, ce Pokémon aurait le pouvoir d'exaucer les vœux. Quand il dort, il s'entoure d'une épaisse enveloppe de cristal pour se protéger de ses ennemis.",F
 386,3,Deoxys,Psy,,,4,Base,Il est le résultat de la mutation d'un virus extraterrestre exposé à un rayon laser. Sa structure corporelle lui confère une agilité et une vitesse supérieures.,F
 387,4,Tortipouss,Plante,,,,Base,La coquille sur son dos est faite de terre. Elle durcit lorsqu'il s'abreuve. Il vit le long des lacs.,
 388,4,Boskara,Plante,,,,Niveau 1,"Il vit en forêt près de l'eau. En journée, il la quitte pour dorer sa carapace feuillue au soleil.",
@@ -392,7 +392,7 @@
 392,4,Simiabraz,Feu,Combat,,,Niveau 2,Il pratique un art martial spécial qui utilise tous ses membres. Sa flamme ne s'éteint jamais.,
 393,4,Tiplouf,Eau,,,,Base,Il est fier et déteste accepter la nourriture qu'on lui offre. Son pelage épais le protège du froid.,
 394,4,Prinplouf,Eau,,,,Niveau 1,"Il vit seul, à l'écart de ses pairs. Chaque individu est convaincu d'être meilleur que les autres.",
-395,4,Pingoléon,Eau,Métal,,,Niveau 2,Les trois cornes de son bec sont le symbole de sa force. Celles du chef sont plus grosses que les autres.,
+395,4,Pingoléon,Eau,Acier,,,Niveau 2,Les trois cornes de son bec sont le symbole de sa force. Celles du chef sont plus grosses que les autres.,
 396,4,Étourmi,Normal,Vol,,,Base,"Ils volent en nombre. Bien que minuscule, il bat des ailes avec une vigueur impressionnante.",
 397,4,Étourvol,Normal,Vol,,,Niveau 1,Il survole les forêts et les champs en quête de Pokémon insectes. Ils forment de grandes volées.,
 398,4,Étouraptor,Normal,Vol,,,Niveau 2,Un Pokémon sauvage qui a le courage de défier des ennemis beaucoup plus grands que lui.,
@@ -407,8 +407,8 @@
 407,4,Roserade,Plante,Poison,,,Niveau 2,Il attire ses proies avec son doux parfum et les achève grâce aux fouets d'épines de ses bras.,
 408,4,Kranidos,Roche,,,,Base,Il vivait dans la jungle il y a environ 100 millions d'années. Son crâne est dur comme du fer.,
 409,4,Charkos,Roche,,,,Niveau 1,Son violent coup de tête est assez puissant pour pulvériser les matériaux les plus résistants.,
-410,4,Dinoclier,Roche,Métal,,,Base,Un Pokémon qui vivait dans la jungle il y a 100 millions d'années. Son visage est très dur.,
-411,4,Bastiodon,Roche,Métal,,,Niveau 1,Il résiste à toute attaque frontale. C'est un Pokémon docile qui se nourrit d'herbe et de Baies.,
+410,4,Dinoclier,Roche,Acier,,,Base,Un Pokémon qui vivait dans la jungle il y a 100 millions d'années. Son visage est très dur.,
+411,4,Bastiodon,Roche,Acier,,,Niveau 1,Il résiste à toute attaque frontale. C'est un Pokémon docile qui se nourrit d'herbe et de Baies.,
 412,4,Cheniti,Insecte,,,3,Base,"Pour se protéger des vents glacés de l'hiver, il s'est tissé une cape de feuilles et de brindilles.",
 413,4,Cheniselle,Insecte,Plante,,3,Niveau 1,Son apparence varie selon le lieu d'évolution. Son corps est façonné avec les matériaux à disposition.,
 414,4,Papilord,Insecte,Vol,,,Niveau 1,Il aime le nectar des fleurs et n'hésite pas à voler celui que récupère Apitrini.,
@@ -433,8 +433,8 @@
 433,4,Korillon,Psy,,,,Base,Il émet des cris en agitant l'orbe à l'arrière de sa gorge. Il avance par bonds désordonnés.,
 434,4,Moufouette,Poison,Ténèbres,,,Base,Il se protège en expulsant un fluide nocif par son derrière. La puanteur dure 24 heures.,
 435,4,Moufflair,Poison,Ténèbres,,,Niveau 1,Il attaque en projetant un liquide fétide du bout de sa queue. Il peut tirer à 50 mètres.,
-436,4,Archéomire,Métal,Psy,,,Base,Il rappelle des objets trouvés dans les sépultures anciennes. Nul ne sait s'ils sont liés.,
-437,4,Archéodong,Métal,Psy,,,Niveau 1,La découverte d'un de ces Pokémon sur un site de fouilles après 2000 ans de sommeil a fait sensation.,
+436,4,Archéomire,Acier,Psy,,,Base,Il rappelle des objets trouvés dans les sépultures anciennes. Nul ne sait s'ils sont liés.,
+437,4,Archéodong,Acier,Psy,,,Niveau 1,La découverte d'un de ces Pokémon sur un site de fouilles après 2000 ans de sommeil a fait sensation.,
 438,4,Manzaï,Roche,,,,Base,"On dirait qu'il pleure constamment. En fait, il régule ses fluides corporels en éliminant le surplus.",
 439,4,Mime Jr.,Psy,Fée,,,Base,"Il imite ses ennemis. Une fois imités, ils ne peuvent plus quitter ce Pokémon des yeux.",
 440,4,Ptiravi,Normal,,,,Base,Ce Pokémon ne se sépare jamais de son petit caillou et a tendance à traîner dans les pieds des gens.,
@@ -445,7 +445,7 @@
 445,4,Carchacrok,Dragon,Sol,1,,Niveau 2,"Quand il se recroqueville et étend ses ailes, on dirait un chasseur. Sa vitesse est supersonique.",
 446,4,Goinfrex,Normal,,,,Base,Il avale son poids en nourriture chaque jour. Il avale tout sans prendre le temps de mâcher.,
 447,4,Riolu,Combat,,,,Base,Son aura s'intensifie pour prévenir son entourage quand il a peur ou quand il est triste.,
-448,4,Lucario,Combat,Métal,1,,Niveau 1,Il ressent toutes les auras. Il comprend le langage humain.,
+448,4,Lucario,Combat,Acier,1,,Niveau 1,Il ressent toutes les auras. Il comprend le langage humain.,
 449,4,Hippopotas,Sol,,,2,Base,Il vit dans des endroits arides. Il exsude du sable granuleux au lieu de transpirer.,
 450,4,Hippodocus,Sol,,,2,Niveau 1,Il emmagasine du sable qu'il expulse en tornades par les pores de sa peau pour attaquer.,
 451,4,Rapion,Poison,Insecte,,,Base,"Il saisit sa proie avec les pinces de sa queue, lui injecte un poison et la retient jusqu'à ce qu'il agisse.",
@@ -459,7 +459,7 @@
 459,4,Blizzi,Plante,Glace,,,Base,"Il vit sur les monts enneigés. Ignorant les coutumes humaines, il lui arrive d'être très indiscret.",
 460,4,Blizzaroi,Plante,Glace,1,,Niveau 1,C'est l'abominable homme des neiges. Il ensevelit les montagnes sous son blizzard.,
 461,4,Dimoret,Ténèbres,Glace,,,Niveau 1,Ils vivent par groupe de 4 ou 5 en région froide et chassent de façon très organisée.,
-462,4,Magnézone,Electrique,Métal,,,Niveau 2,Il a évolué suite à son exposition à un champ magnétique spécial. Ses 3 unités génèrent du magnétisme.,
+462,4,Magnézone,Electrique,Acier,,,Niveau 2,Il a évolué suite à son exposition à un champ magnétique spécial. Ses 3 unités génèrent du magnétisme.,
 463,4,Coudlangue,Normal,,,,Niveau 1,Il enroule tout dans sa langue extensible. Ceux qui l'approchent finissent couverts de bave.,
 464,4,Rhinastoc,Sol,Roche,,,Niveau 2,Il bande ses muscles pour projeter des pierres ou des Racaillou depuis le creux de ses paumes.,
 465,4,Bouldeneu,Plante,,,,Niveau 1,Il ligote sa proie en étirant ses bras en lianes. Il ne craint pas de perdre un bras face à un ennemi.,
@@ -473,16 +473,16 @@
 473,4,Mammochon,Glace,Sol,,,Niveau 2,Ses défenses spectaculaires sont glacées. Il a failli disparaître dans la canicule suivant l'ère glaciaire.,
 474,4,Porygon-Z,Normal,,,,Niveau 2,"Un logiciel supplémentaire fut installé pour l'améliorer. Mais depuis, il se comporte bizarrement.",
 475,4,Gallame,Psy,Combat,1,,Niveau 2,Il frappe avec les grandes lames à ses coudes. Son talent d'escrimeur n'a d'égal que sa courtoisie.,
-476,4,Tarinorme,Roche,Métal,,,Niveau 1,Son corps libère une puissante force magnétique. Il dirige trois petites unités appelées Mini-nez.,
+476,4,Tarinorme,Roche,Acier,,,Niveau 1,Son corps libère une puissante force magnétique. Il dirige trois petites unités appelées Mini-nez.,
 477,4,Noctunoir,Spectre,,,,Niveau 2,L'antenne sur sa tête capte les ondes radio du monde des esprits lui ordonnant d'y porter des gens.,
 478,4,Momartik,Glace,Spectre,,,Niveau 1,Ce Pokémon fait tomber des morceaux de glace et se protège avec un feu spectral.,
 479,4,Motisma,Electrique,Spectre,,6,Base,Son corps est fait de plasma. Il cause de gros dégâts en infiltrant des appareils électroniques.,
 480,4,Créhelf,Psy,,,,Base,"On l'appelle ""être du savoir"". On raconte que son regard a le pouvoir d'effacer la mémoire.",L
 481,4,Créfollet,Psy,,,,Base,"On l'appelle ""être de l'émotion"". Il enseigne aux hommes la beauté de la tristesse, la douleur de la joie.",L
 482,4,Créfadet,Psy,,,,Base,"On l'appelle ""être de la volonté"". Il dort au fond d'un lac pour maintenir l'équilibre du monde.",L
-483,4,Dialga,Métal,Dragon,,2,Base,Il peut contrôler le temps. Les mythes de Sinnoh en parlent comme d'une divinité ancienne.,L
+483,4,Dialga,Acier,Dragon,,2,Base,Il peut contrôler le temps. Les mythes de Sinnoh en parlent comme d'une divinité ancienne.,L
 484,4,Palkia,Eau,Dragon,,2,Base,Il peut modeler l'espace. Les mythes de Sinnoh en parlent comme d'une divinité ancienne.,L
-485,4,Heatran,Métal,Métal,,,Base,Il hante les grottes volcaniques. Il rampe au mur et au plafond grâce à ses pieds en formes de croix.,L
+485,4,Heatran,Acier,Acier,,,Base,Il hante les grottes volcaniques. Il rampe au mur et au plafond grâce à ses pieds en formes de croix.,L
 486,4,Regigigas,Normal,,,,Base,Une légende tenace veut que ce Pokémon ait traîné les continents en les attachant à des cordes.,L
 487,4,Giratina,Spectre,Dragon,,2,Base,Un Pokémon censé vivre dans un monde à l'opposé du nôtre. Il apparaît dans un cimetière ancien.,L
 488,4,Cresselia,Psy,,,,Base,Ses ailes libèrent un rideau de particules brillantes. Ce Pokémon symboliserait le croissant de lune.,L
@@ -527,7 +527,7 @@
 527,5,Chovsourir,Psy,Vol,,,Base,Il vit dans les forêts sombres et les grottes. Il émet des ultrasons par le nez pour se diriger.,
 528,5,Rhinolove,Psy,Vol,,,Niveau 1,Il émet des ondes sonores de différentes fréquences par le nez. Certaines peuvent briser des rochers.,
 529,5,Rototaupe,Sol,,,,Base,Il peut creuser à plus de 50km/h et faire la course avec une voiture roulant sur le terrain qu'il creuse.,
-530,5,Minotaupe,Sol,Métal,,,Niveau 1,Ses vrilles en acier peuvent transpercer des poutres en fer. Il est très employé dans la construction de tunnels.,
+530,5,Minotaupe,Sol,Acier,,,Niveau 1,Ses vrilles en acier peuvent transpercer des poutres en fer. Il est très employé dans la construction de tunnels.,
 531,5,Nanméouïe,Normal,,1,,Base,Il ausculte les gens avec ses antennes auriculaires pour juger de leurs émotions ou de leur santé.,
 532,5,Charpenti,Combat,,,,Base,"Il combat avec une poutre. Quand il en arrive à transporter de lourds madriers sans problème, l'évolution est proche.",
 533,5,Ouvrifier,Combat,,,,Niveau 1,Même une armée de catcheurs se jetant sur son corps hyper musclé ne le ferait pas ciller.,
@@ -586,7 +586,7 @@
 586,5,Haydaim,Normal,Plante,,4,Niveau 1,"Ces Pokémon changent de forme en fonction des saisons. D'ordinaire, on ne les voit que sous une seule forme à la fois, mais dans la Forêt Sibylline, il est possible de voir les quatre coexister !",
 587,5,Emolga,Electrique,Vol,,,Base,"Les baies sucrées sont son pêché mignon. Il lui arrive d'en conserver beaucoup trop dans ses bajoues, ce qui l'empêche de bien planer.",
 588,5,Carabing,Insecte,,,,Base,Il crache un liquide qui dissout les coquilles des Escargaume pour se régaler de leur contenu.,
-589,5,Lançargot,Insecte,Métal,,,Niveau 1,Il charge ses ennemis en brandissant ses lances.,
+589,5,Lançargot,Insecte,Acier,,,Niveau 1,Il charge ses ennemis en brandissant ses lances.,
 590,5,Trompignon,Plante,Poison,,,Base,On ignore toujours l'origine ou la signification de sa forte ressemblance avec une Poké Ball.,
 591,5,Gaulet,Plante,Poison,,,Niveau 1,"Ce Pokémon a tendance à très peu se déplacer. Quand il voit une Poké Ball abandonnée au sol, il reste immobile à côté.",
 592,5,Viskuse,Eau,Spectre,,2,Base,"Il enroule ses membres en forme de voiles autour de ses proies, puis les entraîne dans les abysses.",
@@ -594,11 +594,11 @@
 594,5,Mamanbo,Eau,,,,Base,On pense qu'il protège les Pokémon affaiblis parce qu'il partage avec eux les mêmes prédateurs.,
 595,5,Statitik,Insecte,Electrique,,,Base,Il s'accroche aux autres Pokémon pour aspirer leur électricité statique. On en trouve souvent collés au postérieur de Voltoutou.,
 596,5,Mygavolt,Insecte,Electrique,,,Niveau 1,Il attaque en projetant les poils de son abdomen chargés en électricité. La victime reste alors paralysée pendant trois jours et trois nuits.,
-597,5,Grindur,Plante,Métal,,,Base,Il aime les grottes pleines de mousse. Les enzymes contenues dans ces plantes l'aident à obtenir des épines grandes et solides.,
-598,5,Noacier,Plante,Métal,,,Niveau 1,Il fissure la roche avec ses épines pour ensuite absorber les nutriments qui s'y trouvent grâce à l'extrémité de ses tentacules.,
-599,5,Tic,Métal,,,,Base,"Les humains auraient inventé les mécanismes à engrenages il y a fort longtemps, en observant ce Pokémon.",
-600,5,Clic,Métal,,,,Niveau 1,Ce Pokémon symbolisant la technologie industrielle est souvent utilisé dans le logo des entreprises de Galar.,
-601,5,Cliticlic,Métal,,,,Niveau 2,Il peut envoyer de terribles décharges électriques de la pointe de ses pics. Il accumule de grandes quantités d'énergie dans son noyau rouge.,
+597,5,Grindur,Plante,Acier,,,Base,Il aime les grottes pleines de mousse. Les enzymes contenues dans ces plantes l'aident à obtenir des épines grandes et solides.,
+598,5,Noacier,Plante,Acier,,,Niveau 1,Il fissure la roche avec ses épines pour ensuite absorber les nutriments qui s'y trouvent grâce à l'extrémité de ses tentacules.,
+599,5,Tic,Acier,,,,Base,"Les humains auraient inventé les mécanismes à engrenages il y a fort longtemps, en observant ce Pokémon.",
+600,5,Clic,Acier,,,,Niveau 1,Ce Pokémon symbolisant la technologie industrielle est souvent utilisé dans le logo des entreprises de Galar.,
+601,5,Cliticlic,Acier,,,,Niveau 2,Il peut envoyer de terribles décharges électriques de la pointe de ses pics. Il accumule de grandes quantités d'énergie dans son noyau rouge.,
 602,5,Anchwatt,Electrique,,,,Base,Ils agissent en groupes. Ils possèdent un organe produisant de l'électricité et lancent des décharges en cas de danger.,
 603,5,Lampéroie,Electrique,,,,Niveau 1,Les taches rondes émettent de l'électricité. Il s'enroule autour de ses proies et les électrocute.,
 604,5,Ohmassacre,Electrique,,,,Niveau 2,Il peut sortir de l'eau à la force de ses bras pour attraper des proies sur la rive. Il retourne à l'eau en un instant.,
@@ -622,20 +622,20 @@
 622,5,Gringolem,Sol,Spectre,,,Base,Ce Pokémon très ancien a été façonné avec de l'argile. On ne sait pourquoi certains spécimens n'ont de cesse d'aligner de grosses pierres.,
 623,5,Golemastoc,Sol,Spectre,,,Niveau 1,"Son énergie viendrait d'un mécanisme à mouvement perpétuel interne, mais jusqu'à présent, personne n'en a la preuve.",
 624,5,Scalpion,Ténèbres,,,,Base,"Après avoir dépecé ses ennemis, il va sur les berges pour aiguiser ses lames sur une pierre.",
-625,5,Scalproie,Ténèbres,Métal,,,Niveau 1,Sa recherche des meilleurs endroits où trouver des pierres pour affûter ses lames le conduit souvent à affronter des Incisache,
+625,5,Scalproie,Ténèbres,Acier,,,Niveau 1,Sa recherche des meilleurs endroits où trouver des pierres pour affûter ses lames le conduit souvent à affronter des Incisache,
 626,5,Frison,Normal,,,,Base,"Il peut détruire une voiture d'un coup de tête. Plus sa crinière est volumineuse, plus son rang au sein du troupeau est élevé.",
 627,5,Furaiglon,Normal,Vol,,,Base,C'est un guerrier endurci dès sa naissance. Il commence d'ailleurs par défier ses parents au combat pour leur prouver sa valeur.,
 628,5,Gueriaigle,Normal,Vol,,2,Niveau 1,"Rien n'effraie cet intrépide Pokémon, pas même la mort. Jadis, les gens d'Alola le surnommaient « le preux chevalier du ciel » avec respect.",
 629,5,Vostourno,Ténèbres,Vol,,,Base,Il protège son tendre popotin avec le crâne d'une de ses proies. Il en change régulièrement en grandissant,
 630,5,Vaututrice,Ténèbres,Vol,,,Niveau 1,"Il tournoie, haut dans le ciel, à la recherche d'un Pokémon affaibli. Sa proie favorite est le petit Osselait.",
 631,5,Aflamanoir,Feu,,,,Base,Il fait fondre peu à peu l’exosquelette des Fermite pour se délecter de leur chair.,
-632,5,Fermite,Insecte,Métal,,,Base,Sa grande mâchoire réduit même les rochers en miettes.,
+632,5,Fermite,Insecte,Acier,,,Base,Sa grande mâchoire réduit même les rochers en miettes.,
 633,5,Solochi,Ténèbres,Dragon,,,Base,Il mord d'abord et réfléchit ensuite. On dit qu'il n'oublie jamais l'odeur de la nourriture qu'il aime,
 634,5,Diamat,Ténèbres,Dragon,,,Niveau 1,"Il est toujours couvert de blessures, même s'il n'a affronté personne.",
 635,5,Trioxhydre,Ténèbres,Dragon,,,Niveau 2,Il dévore tout ce qui bouge. Bon nombre de légendes mentionnent des villages entiers rasés,
 636,5,Pyronille,Insecte,Feu,,,Base,"Il se sert de flammes pour se défendre. Jadis, les anciens pensaient qu'il nichait dans le soleil.",
 637,5,Pyrax,Insecte,Feu,,,Niveau 1,Il décrit des cercles dans le ciel en faisant pleuvoir des écailles enflammées. Il était jadis surnommé « le courroux solaire ».,
-638,5,Cobaltium,Métal,Combat,,,Base,Il possède un corps et un cœur de fer. Il peut mater les Pokémon les plus agressifs d'un simple regard.,L
+638,5,Cobaltium,Acier,Combat,,,Base,Il possède un corps et un cœur de fer. Il peut mater les Pokémon les plus agressifs d'un simple regard.,L
 639,5,Terrakium,Roche,Combat,,,Base,Il possède un pouvoir incommensurable. Il se montre impitoyable envers ceux qui s'en prennent aux petits Pokémon.,L
 640,5,Viridium,Plante,Combat,,,Base,"Rapide comme le vent, il s'abat tel un tourbillon sur ses ennemis avant de les transpercer sans pitié de ses cornes acérées.",L
 641,5,Boréas,Vol,,,2,Base,L'énergie dégagée par sa queue provoque d'énormes tempêtes dont la force peut renverser des maisons.,L
@@ -646,7 +646,7 @@
 646,5,Kyurem,Dragon,Glace,,3,Base,Il se serait congelé lui-même avec son souffle glacé pour stabiliser sa structure cellulaire.,L
 647,5,Keldeo,Eau,Combat,,2,Base,"Lorsqu'il livre un combat difficile, la corne sur son front se renforce et se développe, ce qui éveillerait sa véritable puissance.",F
 648,5,Meloetta,Normal,Psy,,2,Base,Sa voix si particulière lui permet de chanter des mélodies qui ensorcellent les gens et modifient leurs émotions.,F
-649,5,Genesect,Insecte,Métal,,5,Base,"Un Pokémon existant depuis 300 millions d'années, et modifié par la Team Plasma.",F
+649,5,Genesect,Insecte,Acier,,5,Base,"Un Pokémon existant depuis 300 millions d'années, et modifié par la Team Plasma.",F
 650,6,Marisson,Plante,,,,Base,"Lorsqu’il rassemble ses forces, les piquants souples qui recouvrent sa tête deviennent si durs et acérés qu’ils pourraient transpercer un rocher.",
 651,6,Boguérisse,Plante,,,,Niveau 1,"Il renforce ses membres inférieurs en se ruant violemment sur ses congénères. Naturellement paisible, il ne provoque jamais un combat.",
 652,6,Blindépique,Plante,Combat,,,Niveau 2,Il est si puissant qu’il pourrait renverser un char de 50 t d’un seul assaut. Il se sert de son corps comme d’un bouclier pour protéger ses alliés.,
@@ -676,9 +676,9 @@
 676,6,Couafarel,Normal,,,10,Base,"Sa fourrure pousse indéfiniment, mais il refuse de se faire couper la toison par une personne en qui il n'a pas confiance",
 677,6,Psystigri,Psy,,,,Base,"Sous son masque inexpressif, il est en fait constamment en train d'essayer de contenir ses puissants pouvoirs psychiques",
 678,6,Mistigrix,Psy,,,2,Niveau 1,"Les motifs en forme d'yeux, à l’intérieur de ses oreilles, sont la source de ses pouvoirs psychiques. La plupart du temps, il cache ces pouvoirs.",
-679,6,Monorpale,Métal,Spectre,,,Base,"L'âme de ce pokemon est celle d'un humain qui a été tué il y a fort longtemps, par la même lame qui forme maintenant son corps.",
-680,6,Dimoclès,Métal,Spectre,,,Niveau 1,Il s'est dédoublé en évoluant. Il intimide ses ennemis à grands coups de bruits métalliques,
-681,6,Exagide,Métal,Spectre,,2,Niveau 2,"Grâce à son corps en acier et à sa barrière psychique, il peut se défendre en affaiblissant toutes sortes d'attaques.",
+679,6,Monorpale,Acier,Spectre,,,Base,"L'âme de ce pokemon est celle d'un humain qui a été tué il y a fort longtemps, par la même lame qui forme maintenant son corps.",
+680,6,Dimoclès,Acier,Spectre,,,Niveau 1,Il s'est dédoublé en évoluant. Il intimide ses ennemis à grands coups de bruits métalliques,
+681,6,Exagide,Acier,Spectre,,2,Niveau 2,"Grâce à son corps en acier et à sa barrière psychique, il peut se défendre en affaiblissant toutes sortes d'attaques.",
 682,6,Fluvetin,Fée,,,,Base,Une douce odeur qui charme les gens émane de son corps. Les dames nobles raffolaient de lui.,
 683,6,Cocotine,Fée,,,,Niveau 1,Un parfum capiteux émane constamment de sa fourrure. Ce parfum est si fort qu'il peut priver son Dresseur d'odorat.,
 684,6,Sucroquin,Fée,,,,Base,Sa douce fourrure possède une odeur sucrée comme la barbe à papa. Il produit des filaments gluants pour empêtrer ses adversaires.,
@@ -704,7 +704,7 @@
 704,6,Mucuscule,Dragon,,,,Base,Ses cornes lui permettent d'inspecter les alentours. Elles sont si sensibles que tout son corps se fige si on les pince.,
 705,6,Colimucus,Dragon,,,2,Niveau 1,"Comme il a du mal à distinguer ses alliés de ses proies, la faim peut parfois le pousser à asperger ses amis de son solvant.",
 706,6,Muplodocus,Dragon,,,2,Niveau 2,"Ce Pokémon adore la compagnie humaine. Si son Dresseur ne lui donne pas assez d'amour, il pleure à grosses larmes visqueuses.",
-707,6,Trousselin,Métal,Fée,,,Base,Il insère l'appendice situé sur sa tête dans les interstices en métal afin d'en extraire les ions,
+707,6,Trousselin,Acier,Fée,,,Base,Il insère l'appendice situé sur sa tête dans les interstices en métal afin d'en extraire les ions,
 708,6,Brocélôme,Spectre,Plante,,,Base,Il imite la voix d'un enfant pour inciter les gens à se perdre au plus profond des bois. Il espère ainsi se faire de nouveaux amis.,
 709,6,Desséliande,Spectre,Plante,,,Niveau 1,On raconte que ce Pokémon mange tous ceux qui s'en prennent à sa forêt. Il est toutefois très gentil avec ses voisins sylvains.,
 710,6,Pitrouille,Spectre,Plante,,,Base,Il peut manipuler les humains et les Pokémon en les hypnotisant grâce à la lumière qui filtre par les trous de son ventre,
@@ -774,7 +774,7 @@
 774,7,Météno,Roche,Vol,,8,Base,"Il vivait dans la couche d'ozone, avant que sa carapace, devenue trop lourde, ne finisse par le faire chuter sur la terre ferme.",
 775,7,Dodoala,Normal,,,,Base, Il rejoint et quitte ce monde en dormant. Son existence se déroule comme un rêve paisible. Il dort du sommeil du juste toute sa vie durant.,
 776,7,Boumata,Feu,Dragon,,,Base,"Sa carapace est très instable. Si on la heurte par mégarde, elle explose. Le creux sur son ventre est son point faible.",
-777,7,Togedemaru,Electrique,Métal,,,Base,"Les épines de ce Pokémon sont normalement baissées, mais quand il s'énerve, elles se dressent afin de pourfendre ses agresseurs.",
+777,7,Togedemaru,Electrique,Acier,,,Base,"Les épines de ce Pokémon sont normalement baissées, mais quand il s'énerve, elles se dressent afin de pourfendre ses agresseurs.",
 778,7,Mimiqui,Spectre,Fée,,2,Base,Sa véritable apparence est inconnue. Les chercheurs qui ont vu sous son déguisement sont littéralement morts de peur.,
 779,7,Denticrisse,Eau,Psy,,,Base," Lorsqu'il utilise l'appendice sur sa tête pour projeter ses pouvoirs psychiques, il émet un bruit aussi irritant qu'un grincement de dents.",
 780,7,Draïeul,Normal,Dragon,,,Base," C'est une bonne pâte de nature, mais si par malheur il s'énerve, il peut détruire tout ce qui l'entoure de son souffle puissant.",
@@ -788,25 +788,25 @@
 788,7,Tokopisco,Eau,Fée,,,Base, Il confond ses ennemis grâce au brouillard et les pousse à s'en prendre à eux-mêmes. Il puise son énergie dans les courants marins.,L
 789,7,Cosmog,Psy,,,,Base," Son corps est composé d'un gaz très volatile. Il croît lentement, en accumulant les poussières atmosphériques au gré de ses déplacements.",L
 790,7,Cosmovum,Psy,,,,Niveau 1," On pourrait le croire mort car il ne bouge pas du tout. Au toucher, il reste tiède. On le surnomme ""cocon céleste"" depuis l'Antiquité.",L
-791,7,Solgaleo,Psy,Métal,,,Niveau 2, Il viendrait d'un autre monde. Tout son corps émet une puissante lumière qui peut changer la nuit la plus noire en un jour radieux.,L
+791,7,Solgaleo,Psy,Acier,,,Niveau 2, Il viendrait d'un autre monde. Tout son corps émet une puissante lumière qui peut changer la nuit la plus noire en un jour radieux.,L
 792,7,Lunala,Psy,Spectre,,,Niveau 2,"Cet être mystérieux viendrait d'un autre monde. Il absorbe continuellement la lumière, transformant le jour en nuit noire.",L
 793,7,Zéroïd,Roche,Poison,,,Base," L'une des mystérieuses Ultra-Chimères. On l'aurait vue parasiter des gens en pleine rue, les rendant extrêmement violents.",U
 794,7,Mouscoto,Insecte,Combat,,,Base, Personne ne sait si cette Ultra-Chimère venue d'un autre monde montre ses muscles pour être admirée ou pour intimider ceux qu'elle rencontre.,U
 795,7,Cancrelove,Insecte,Combat,,,Base, L'une des Ultra-Chimères. On l'aurait aperçue en train de courir à une vitesse prodigieuse.,U
 796,7,Câblifère,Electrique,,,,Base, L'une des mystérieuses Ultra-Chimères. On l'aurait vue émettre une formidable quantité d'électricité autour d'elle.,U
-797,7,Bamboiselle,Métal,Vol,,,Base, Une Ultra-Chimère qui a traversé l'Ultra-Brèche. On l'aurait aperçue parcourir le ciel à grande vitesse.,U
-798,7,Katagami,Plante,Métal,,,Base,"Une Ultra-Chimère venue de l'Ultra-Brèche. Elle ne semble pas agressive, bien que son corps tout entier soit une arme tranchante.",U
+797,7,Bamboiselle,Acier,Vol,,,Base, Une Ultra-Chimère qui a traversé l'Ultra-Brèche. On l'aurait aperçue parcourir le ciel à grande vitesse.,U
+798,7,Katagami,Plante,Acier,,,Base,"Une Ultra-Chimère venue de l'Ultra-Brèche. Elle ne semble pas agressive, bien que son corps tout entier soit une arme tranchante.",U
 799,7,Engloutyran,Ténèbres,Dragon,,,Base, Une espèce d'Ultra-Chimère. On l'aurait aperçue dévorant des montagnes et des gratte-ciel.,U
 800,7,Necrozma,Psy,,U,3,Base," Une créature endormie sous terre. On suppose qu'il s'agit d'une Ultra-Chimère et qu'elle serait venue d'un autre monde, il y a bien longtemps.",L
-801,7,Magearna,Métal,Fée,,2,Base," Ce Pokémon a été créé de toutes pièces il y a 500 ans. Il comprend ce qu'on lui dit, mais il n'est pas doué de parole.",F
+801,7,Magearna,Acier,Fée,,2,Base," Ce Pokémon a été créé de toutes pièces il y a 500 ans. Il comprend ce qu'on lui dit, mais il n'est pas doué de parole.",F
 802,7,Marshadow,Combat,Spectre,,,Base, Il dissimule son apparence aux autres en se tapissant dans l'ombre. Son existence pourrait se révéler n'être qu'une fable.,F
 803,7,Vémini,Poison,,,,Base,Cette Ultra-Chimère venue d'un autre monde ricane lorsqu'elle asperge ses proies de venin grâce au dard qu'elle a sur la tête.,U
 804,7,Mandrillon,Poison,Dragon,,,Niveau 1,"Son corps contient des hectolitres de poison. Il fait partie de ces créatures que l'on nomme ""Ultra-Chimères"".",U
-805,7,Ama-Ama,Roche,Métal,,,Base, Il est sorti d'une Ultra-Brèche. Il est composé de plusieurs petites entités qui s'assemblent pour n'en former qu'une seule.,U
+805,7,Ama-Ama,Roche,Acier,,,Base, Il est sorti d'une Ultra-Brèche. Il est composé de plusieurs petites entités qui s'assemblent pour n'en former qu'une seule.,U
 806,7,Pierroteknik,Feu,Spectre,,,Base, Il s'approche des gens avec son allure désarticulée et fait subitement exploser sa tête. Ce serait une Ultra-Chimère.,U
 807,7,Zeraora,Electrique,,,,Base," Il déchiquette son adversaire avec ses griffes chargées d’électricité. Même si sa cible évite l’attaque, elle reçoit un coup de jus.",F
-808,7,Meltan,Métal,,,,Base,"Il se nourrit du métal qu'il fait fondre, et produit de l'énergie en faisant circuler du métal liquide dans son corps.",F
-809,7,Melmetal,Métal,,,,Niveau 1,"On dit que, grâce à la force centrifuge, les coups de poing qu'il assène avec ses lourds écrous seraient les plus dévastateurs parmi les Pokémon.",F
+808,7,Meltan,Acier,,,,Base,"Il se nourrit du métal qu'il fait fondre, et produit de l'énergie en faisant circuler du métal liquide dans son corps.",F
+809,7,Melmetal,Acier,,,,Niveau 1,"On dit que, grâce à la force centrifuge, les coups de poing qu'il assène avec ses lourds écrous seraient les plus dévastateurs parmi les Pokémon.",F
 810,8,Ouistempo,Plante,,,,Base,Il attaque en frappant frénétiquement avec son bâton. Son enthousiasme grandit à mesure que le rythme s'accélère.,
 811,8,Badabouin,Plante,,,,Niveau 1,Ces pokemons qui parviennent à suivre le rythme le plus effréné avec leurs bâtons sont les plus respectés par leurs camarades.,
 812,8,Gorythmic,Plante,,,,Niveau 2,Il contrôle le pouvoir de sa souche singulière en tapant en rythme dessus. Il se bat en manipulant des racines.,
@@ -820,7 +820,7 @@
 820,8,Rongrigou,Normal,,,,Niveau 1,"Il amasse tellement de Baies dans sa queue qu'elles tombent les unes après les autres, mais il est si étourdi qu'il ne s'en rend pas compte.",
 821,8,Minisange,Vol,,,,Base,Ce Pokémon brave affronte même les adversaires les plus redoutables. Il devient plus fort à mesure qu'il subit les contre-attaques.,
 822,8,Bleuseille,Vol,,,,Niveau 1,Il est capable d'utiliser des objets avec ses serres : il peut par exemple saisir et lancer des pierres ou même enrouler une corde autour d'un ennemi.,
-823,8,Corvaillus,Vol,Métal,,,Niveau 2,Il n'a aucun rival dans le ciel de Galar. L'aspect intimidant de son corps d'acier noir et lustré inspire la crainte chez ses ennemis.,
+823,8,Corvaillus,Vol,Acier,,,Niveau 2,Il n'a aucun rival dans le ciel de Galar. L'aspect intimidant de son corps d'acier noir et lustré inspire la crainte chez ses ennemis.,
 824,8,Larvadar,Insecte,,,,Base,"Comme il passe tout son temps à recueillir des informations, son intelligence est très développée, mais sa force physique laisse à désirer.",
 825,8,Coléodôme,Insecte,Psy,,,Niveau 1,"Il ne bouge presque pas, mais il est bien vivant. On dit qu'il aurait découvert ses pouvoirs psychiques à force de jeûner dans sa coquille.",
 826,8,Astronelle,Insecte,Psy,,,Niveau 2,Il est renommé pour son intelligence. Son gros cerveau est un indicateur de la puissance de ses pouvoirs psychiques.,
@@ -860,7 +860,7 @@
 860,8,Fourbelin,Ténèbres,Fée,,,Niveau 1,Sa technique de combat consiste à faire semblant de se prosterner devant son adversaire pour le transpercer avec ses cheveux aiguisés.,
 861,8,Angoliath,Ténèbres,Fée,,,Niveau 2,"Ses cheveux sont comme des muscles filandreux qu'il peut détacher pour saisir ses adversaires, tels des tentacules.",
 862,8,Ixon,Ténèbres,Normal,,,Niveau 2,Il possède une puissance vocale remarquable. On appelle Blocage sa technique qui consiste à intimider l'ennemi avec son cri guttural.,
-863,8,Berserkatt,Métal,,,,Niveau 1,La fourrure sur sa tête s'est endurcie et a pris la forme d'un casque en fer. Il est de nature très bagarreuse.,
+863,8,Berserkatt,Acier,,,,Niveau 1,La fourrure sur sa tête s'est endurcie et a pris la forme d'un casque en fer. Il est de nature très bagarreuse.,
 864,8,Corayôme,Spectre,,,,Niveau 1,Son énergie spectrale accrue s'est répandue hors de sa coquille. Il protège l'âme de son noyau avec son corps spirituel.,
 865,8,Palarticho,Combat,,,,Niveau 1,"Il pare les attaques avec le tranchant de son solide poireau, et contre-attaque avec la pointe de la tige. Son arme est également comestible.",
 866,8,M. Glaquette,Glace,Psy,,,Niveau 2,"Véritable virtuose des claquettes, il se donne en spectacle en dansant d'un pas léger tout en jonglant avec sa canne de glace.",
@@ -875,13 +875,13 @@
 875,8,Bekaglaçon,Glace,,,2,Base,"Originaire d'une contrée polaire, ce Pokémon a débarqué dans la région ballotté par les flots. Il garde toujours la tête froide.",
 876,8,Wimessir,Psy,Normal,,2,Base,"Il peut sentir les émotions d'autrui avec ses cornes. Le mâle reste aux côtés de son Dresseur pour s'occuper de lui, à l'image d'un domestique.",
 877,8,Morpeko,Electrique,Ténèbres,,2,Base,L'énergie électrique dans ses joues a adopté le type Ténèbres. Il a tellement faim qu'il en devient extrêmement violent.,
-878,8,Charibari,Métal,,,,Base,Ce Pokémon est assez costaud pour porter des charges de cinq tonnes sans problème. Il utilise sa trompe pour creuser le sol.,
-879,8,Pachyradjah,Métal,,,,Niveau 1,Sa peau verte résiste bien à l'eau. Il s'est installé dans la région il y a longtemps et a travaillé en coopération avec les Hommes.,
+878,8,Charibari,Acier,,,,Base,Ce Pokémon est assez costaud pour porter des charges de cinq tonnes sans problème. Il utilise sa trompe pour creuser le sol.,
+879,8,Pachyradjah,Acier,,,,Niveau 1,Sa peau verte résiste bien à l'eau. Il s'est installé dans la région il y a longtemps et a travaillé en coopération avec les Hommes.,
 880,8,Galvagon,Electrique,Dragon,,,Base,"Jadis, la partie inférieure de son corps musclé le rendait invincible, mais il s'est éteint après avoir mangé toutes les plantes dont il se nourrissait.",
 881,8,Galvagla,Electrique,Glace,,,Base,"Quand la partie supérieure de son corps, couverte de glace, frissonne, il produit de l'électricité. Il éprouve de grandes difficultés à marcher.",
 882,8,Hydragon,Eau,Dragon,,,Base,"La force de ses pattes et de ses mâchoires le rendait presque invincible, mais à trop chasser ses proies, celles-ci ont disparu, et lui avec.",
 883,8,Hydragla,Eau,Glace,,,Base,"Il gèle les alentours pour capturer ses proies, mais comme sa bouche est sur le dessus de sa tête, il a beaucoup de mal à les manger.",
-884,8,Duralugon,Métal,Dragon,,,Base,"Son corps, semblable à du métal poli, allie légèreté et solidité. Malheureusement, il rouille facilement.",
+884,8,Duralugon,Acier,Dragon,,,Base,"Son corps, semblable à du métal poli, allie légèreté et solidité. Malheureusement, il rouille facilement.",
 885,8,Fantyrm,Dragon,Spectre,,,Base,"Revenu à la vie sous forme de Pokémon Spectre, il erre au-dessus de la mer dans laquelle il vivait autrefois.",
 886,8,Dispareptil,Dragon,Spectre,,,Niveau 1,"Il vole à une vitesse de 200 km/h et se bat aux côtés d'un Fantyrm, dont il prend soin jusqu'à son évolution.",
 887,8,Lanssorien,Dragon,Spectre,,,Niveau 2,"Il vit en compagnie de Fantyrm qui logent dans les trous de ses cornes. Quand il passe à l'attaque, il les propulse à la vitesse du son.",
