@@ -13,10 +13,10 @@ module.exports = {
                 {name: 'PokéLoto', 	value: 'pokeloto'},
 				{name: 'Team', 		value: 'team'},
                 {name: 'PokéQuiz', 	value: 'pokequiz'},
-                //{name: 'PokéParty', value: 'pokeparty'},
+                {name: 'PokéParty', value: 'pokeparty'},
+				{name: 'Me', 		value: 'me'},
 				{name: 'News Channel', value: 'news-channel'},
 				{name: 'Publish', 	value: 'publish'},
-				{name: 'Me', 		value: 'me'},
 				{name: 'Pokébot', 	value: 'pokebot'}
             )
         ),
@@ -52,7 +52,7 @@ module.exports = {
 					description: "**Présentation du PokéBot :**\nLe PokéBot est un bot Discord créé par [clezred](https://twitch.tv/clezred) et basé sur l'univers de Pokémon. Grâce à lui, tu pourras jouer à des mini-jeux et en apprendre plus sur les Pokémons !",
 					fields: [{
 							name: "Liste des commandes :",
-							value: "- `/help`\n- `/pokedex`\n- `/pokeloto`\n- `/team`\n- `/pokequiz`" + guildCMDs,
+							value: "- `/help`\n- `/pokedex`\n- `/pokeloto`\n- `/team`\n- `/pokequiz`\n - `/pokeparty`" + guildCMDs,
 							inline: false
 						},
 						pkbServField
@@ -120,12 +120,17 @@ module.exports = {
 					color: 0xFFFF00,
 					description: "",
 					fields: [{
-							name: "",
-							value: "",
-							inline: false
-						},
-						pkbServField
-					],
+						name: "Utilisation :",
+						value: "```/pokeparty\nOptions :\n- acces ┬── Publique (par défaut)\n        └── Privé\n- joueurN: @user```",
+						inline: false
+					},{
+						name: "Description :",
+						value: "Cette commande te permet de jouer à la version multijoueur du PokéQuiz ! Les joueurs disposent de 5 essais chacun, la partie dure 5 minutes et il y a 5 indices bonus disponibles. Une fois la partie terminée il est possible d'en relancer une.",
+						inline: false
+					},{
+						name: "Exemple :",
+						value: "Pour lancer une partie publique :\n`/pokeparty` ou `/pokeparty acces:Publique`\nPour lancer une partie privée :\n`/pokeparty acces:Privée`\nPour lancer une partie en ajoutant directement des joueurs :\n `/pokeparty joueur2: @user joueur3: @user ...`"
+					}],
 					footer: {text: "Aide demandée par " + interaction.user.username},
 					timestamp: new Date,
 				}],

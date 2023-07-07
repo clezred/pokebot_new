@@ -17,6 +17,9 @@ Afficher aléatoirement une équipe de 6 Pokémons
 
 Jouer au PokéQuiz
 > `/pokequiz`
+
+Jouer au PokéParty (PokéQuiz multijoueur)
+> `/pokeparty`
 ___
 ### **Commandes Administrateur Serveurs**
 Ajouter un salon pour recevoir les actualités et les patch-notes (ou le retirer)
@@ -24,13 +27,13 @@ Ajouter un salon pour recevoir les actualités et les patch-notes (ou le retirer
 ___
 ### **Commandes Administrateur PokéBot**
 Arrêter le bot
-> `-stop`
+> `/pokebot stop`
 
 Passer le bot en mode "Maintenance"
-> `-maintenance`
+> `/pokebot maintenance`
 
 Passer le bot en mode "Vanish"
-> `-vanish`
+> `/pokebot vanish`
 
 Publier les actualités et patch-notes
 > `/publish`
