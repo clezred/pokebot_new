@@ -401,6 +401,8 @@ async function pkbotServers() {
     guilds.forEach(guild => {
         desc += "\n- " + guild.name + " | " + guild.id + " | " + guild.memberCount;
     });
+    
+    if (desc.length + 18 >= 4000) desc = desc.substring(0,3900);
 
     logsChannel.send({embeds: [{
         author: {

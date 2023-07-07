@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType, DiscordjsErrorCodes, BaseInteraction, CommandInteraction, MessageCollector } = require('discord.js');
+const { SlashCommandBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType, CommandInteraction } = require('discord.js');
 const { random } = require('../../assets/js/random');
 const fs = require('node:fs');
 const Papa = require('papaparse');
@@ -103,9 +103,9 @@ module.exports = {
 
         const fixedPkmName = latinize(pkm[2]).toUpperCase();
 
-        let msgCollector = message.channel.createMessageCollector({filter: msgFilter, time: 300000, max: 10})
+        const msgCollector = message.channel.createMessageCollector({filter: msgFilter, time: 300000, max: 10})
 
-        let btnCollector = message.createMessageComponentCollector({componentType: ComponentType.Button, maxComponents: 5, dispose: true})
+        const btnCollector = message.createMessageComponentCollector({componentType: ComponentType.Button, maxComponents: 5})
 
         msgCollector.on('collect', msg => {
 
@@ -129,7 +129,6 @@ module.exports = {
         btnCollector.on('collect', btn => {
             btn.deferUpdate();
             if (btn.user.id != interaction.user.id) {
-                btn.reply({content: 'Ce n\'est pas ta partie !', ephemeral: true});
                 return;
             }
 
@@ -208,7 +207,7 @@ module.exports = {
             } else {
                 let looseEmbed = {
                     title: "Défaite PokéQuiz !",
-                    description: "Pokémon à trouver : " + pkm[2] + "\nNombre d'essais : " + tries + "\nNombre d'indices bonus utilisés : " + nbIndices,
+                    description: "Pokémon à trouver : " + pkm[2] + "\nNombre d'essais : " + tries + "/10\nNombre d'indices bonus utilisés : " + nbIndices + "/5",
                     footer: {text: "Défaite de " + interaction.user.username},
                     timestamp: new Date,
                     color: 0xFF0000
