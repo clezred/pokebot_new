@@ -197,8 +197,9 @@ module.exports = {
                             host = players.first();
                             embed.footer.text = 'Hôte de la partie : ' + host.username;
                         } else {
-                            await interaction.editReply({content: 'Partie annulée', embeds: [], components: []})
+                            await interaction.editReply({content: 'Partie annulée', embeds: [], components: []}).then(msg => setTimeout(() => {interaction.deleteReply()}), 5000);
                             lobbyCollector.stop();
+                            return;
                         }
                     }
 
@@ -210,6 +211,7 @@ module.exports = {
                 if (btn.user.id == host.id) {
                     interaction.deleteReply();
                     game(players, interaction.channel, host);
+                    lobbyCollector.stop();
                 }
             }
         })
