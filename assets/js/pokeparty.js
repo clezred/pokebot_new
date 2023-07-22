@@ -228,8 +228,9 @@ async function game(players, channel, host) {
         const components = new ActionRowBuilder()
             .addComponents(restartBtn)
 
+        let finalEmbed
         if (found) {
-            let successEmbed = {
+            finalEmbed = {
                 title: "Victoire PokéQuiz !",
                 description: "Pokémon à trouver : " + pkm[2] + "\nNombre d'indices bonus utilisés : " + nbIndices + "/5",
                 fields: [triesField],
@@ -237,24 +238,8 @@ async function game(players, channel, host) {
                 timestamp: new Date,
                 color: 0x00FF00
             }
-
-            message.edit({
-                embeds: [successEmbed, pokedexID(pkm[0]-1)],
-                components: [components]
-            }).then(message2 => {
-                let filter = c => {
-                    c.deferUpdate();
-                    return c.user.id == host.id;
-                }
-                let timer = setTimeout(() => message.edit({components: []}), 60000);
-                message2.awaitMessageComponent({dispose: true, componentType: ComponentType.Button, maxComponents: 1, filter: filter})
-                    .then(async button => {
-                        clearTimeout(timer);
-                        game(players, channel, host);
-                    })
-            })
         } else {
-            let looseEmbed = {
+            finalEmbed = {
                 title: "Défaite PokéQuiz !",
                 description: "Pokémon à trouver : " + pkm[2] + "\nNombre d'indices bonus utilisés : " + nbIndices + "/5",
                 fields: [triesField],
@@ -262,24 +247,24 @@ async function game(players, channel, host) {
                 timestamp: new Date,
                 color: 0xFF0000
             }
-
-            message.edit({
-                embeds: [looseEmbed, pokedexID(pkm[0]-1)],
-                components: [components]
-            }).then(message2 => {
-                let filter = async c => {
-                    await c.deferUpdate();
-                    return c.user.id == host.id;
-                }
-                let timer = setTimeout(() => message.edit({components: []}), 60000);
-                message2.awaitMessageComponent({dispose: true, componentType: ComponentType.Button, maxComponents: 1, filter: filter})
-                    .then(async button => {
-                        message2.edit({components: []})
-                        clearTimeout(timer);
-                        game(players, channel, host);
-                    })
-            })
         }
+
+        message.edit({
+            embeds: [looseEmbed, pokedexID(pkm[0]-1)],
+            components: [components]
+        }).then(message2 => {
+            let filter = async c => {
+                await c.deferUpdate();
+                return c.user.id == host.id;
+            }
+            let timer = setTimeout(() => message.edit({components: []}), 60000);
+            message2.awaitMessageComponent({dispose: true, componentType: ComponentType.Button, maxComponents: 1, filter: filter})
+                .then(async button => {
+                    message2.edit({components: []})
+                    clearTimeout(timer);
+                    game(players, channel, host);
+                })
+        })
     })
 
 }
