@@ -3,6 +3,11 @@ const Papa = require('papaparse');
 
 var pokeliste = Papa.parse(fs.readFileSync('./assets/csv/pokeliste.csv', "utf-8"), {encoding: "utf-8"});
 
+/**
+ * Fonction pour obtenir un embed d'une equipe Pokémon
+ * @param {number[]} pkIDs 
+ * @returns discord embed team
+ */
 function teamBuilder(pkIDs) {
 
     if (pkIDs.length != 6) {

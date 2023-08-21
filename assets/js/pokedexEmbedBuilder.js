@@ -3,9 +3,15 @@ const Papa = require('papaparse');
 const rare = require('../json/rare.json');
 const evotype = require('../json/evotype.json');
 const typescolor = require('../json/typescolor.json')
+const latinize = require('latinize');
 
 var pokeliste = Papa.parse(fs.readFileSync('./assets/csv/pokeliste.csv', "utf-8"), {encoding: "utf-8"});
 
+/**
+ * Fonction pour obtenir l'embed pokédex correspondant
+ * @param {number} pkID 
+ * @returns discord embed pokedex
+ */
 function pokedexID(pkID) {
 
     let pkm = pokeliste.data[pkID];
@@ -89,12 +95,18 @@ function pokedexID(pkID) {
     return embed;
 }
 
+/**
+ * Fonction pour obtenir l'embed pokedex correspondant
+ * @param {string} name 
+ * @returns discord embed pokedex
+ */
 function pokedexName(name) {
 
     let i = 0;
     let found = false;
+    let fixedName = latinize(name).toUpperCase();
     while (i < pokeliste.data.length && !found) {
-        if (name.toUpperCase() == pokeliste.data[i][2].toUpperCase()) {
+        if (fixedName == latinize(pokeliste.data[i][2]).toUpperCase()) {
             found = true;
         } else {
             i++;

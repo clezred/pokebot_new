@@ -1,27 +1,47 @@
-# **Features du PokéBot**
+# **Fonctionnalités du PokéBot**
 
 ## Commandes   
 ___
-### **Admin**
+### **Commandes Globales**
+Obtenir de l'aide sur l'utilisation du PokéBot
+> `/help`
+
+Rechercher un Pokémon dans le Pokédex
+> `/pokedex`
+
+Afficher un Pokémon aléatoirement parmis les 1010 répertoriés
+> `/pokeloto`
+
+Afficher aléatoirement une équipe de 6 Pokémons
+> `/team`
+
+Jouer au PokéQuiz
+> `/pokequiz`
+
+Jouer au PokéParty (PokéQuiz multijoueur)
+> `/pokeparty`
 ___
-Arrêter le bot :
-> `-stop`
+### **Commandes Administrateur Serveurs**
+Ajouter un salon pour recevoir les actualités et les patch-notes (ou le retirer)
+> `/news-channel`
+___
+### **Commandes Administrateur PokéBot**
+Arrêter le bot
+> `/pokebot stop`
 
 Passer le bot en mode "Maintenance"
-> `-maintenance`
+> `/pokebot maintenance`
 
 Passer le bot en mode "Vanish"
-> `-vanish`
+> `/pokebot vanish`
+
+Publier les actualités et patch-notes
+> `/publish`
 ___
-### **Serveur Discord PokéBot**
-___
+### **Commandes exclusives au [Serveur Discord PokéBot](https://discord.gg/FrMYzXn48V)**
 Obtenir/Changer le Pokémon qui te représente (aléatoirement)
 > `/me`
 ___
-### **Globales**
-___
-Obtenir de l'aide sur l'utilisation du PokéBot
-> `/help`
 
 ## Fonctionalités Passives
 
