@@ -15,5 +15,13 @@
     "latinize": "^0.5.0",
     "papaparse": "^5.4.1",
     "pg": "^8.11.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clezred/pokebot_new.git"
+  },
+  "bugs": {
+    "url": "https://github.com/clezred/pokebot_new/issues"
+  },
+  "homepage": "https://github.com/clezred/pokebot_new#readme"
 }

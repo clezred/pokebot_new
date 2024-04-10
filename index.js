@@ -23,7 +23,6 @@ const client = new Client({
         GatewayIntentBits.GuildMessageTyping,
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.GuildModeration,
-        GatewayIntentBits.GuildPresences,
         GatewayIntentBits.GuildScheduledEvents,
         GatewayIntentBits.GuildVoiceStates,
         GatewayIntentBits.GuildWebhooks,
@@ -332,14 +331,14 @@ async function refreshNotifsRoles() {
                         const member = guild.members.cache.get(user.id);
 
                         if (member) {
-                            if (!member.roles.cache.has(notifsRoleId)) {
+                            if (!member.roles.cache.has(notifsRoleId) && member.id != member.guild.ownerId) {
                                 member.roles.add(guild.roles.cache.get(notifsRoleId));
                             }
                         }
                     });
 
                     guild.members.cache.forEach(member => {
-                        if (member.roles.cache.has(notifsRoleId) && !users.has(member.user)) {
+                        if (member.roles.cache.has(notifsRoleId) && !users.has(member.user) && member.id != member.guild.ownerId) {
                             member.roles.remove(guild.roles.cache.get(notifsRoleId));
                         }
                     });
