@@ -228,7 +228,7 @@ async function game(players, channel, host) {
         const components = new ActionRowBuilder()
             .addComponents(restartBtn)
 
-        let finalEmbed
+        let finalEmbed;
         if (found) {
             finalEmbed = {
                 title: "Victoire PokéQuiz !",
@@ -250,7 +250,7 @@ async function game(players, channel, host) {
         }
 
         message.edit({
-            embeds: [looseEmbed, pokedexID(pkm[0]-1)],
+            embeds: [finalEmbed, pokedexID(pkm[0]-1)],
             components: [components]
         }).then(message2 => {
             let filter = async c => {
