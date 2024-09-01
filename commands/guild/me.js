@@ -1,7 +1,7 @@
-const { SlashCommandBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType, DiscordjsErrorCodes } = require('discord.js');
+const { SlashCommandBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType, DiscordjsErrorCodes, ChannelType, ChatInputCommandInteraction } = require('discord.js');
 const { random } = require('../../assets/js/random');
 const { getPsqlClient } = require('../../index.js')
-const { shinyRoleId } = require('../../config.json');
+const { shinyRoleId, guildId, logsChannelId } = require('../../config.json');
 const fs = require('node:fs');
 const Papa = require('papaparse');
 
@@ -12,6 +12,10 @@ module.exports = {
 		.setName('me')
 		.setDescription('Te permet d\'obtenir le Pokémon qui te repésente sur le serveur du PokéBot !'),
 
+    /**
+     * 
+     * @param {ChatInputCommandInteraction} interaction 
+     */
 	async execute(interaction) {
 
         let result;
@@ -50,6 +54,9 @@ module.exports = {
                 .catch((error) => console.error(error));
         }
 
+        const guild = interaction.client.guilds.cache.get(guildId);
+		const logsChannel = guild.channels.cache.get(logsChannelId);
+
 		const button = new ButtonBuilder()
             .setLabel('Obtenir mon Pokémon')
             .setCustomId('get-my-pokemon')
@@ -71,9 +78,10 @@ module.exports = {
             }).then(async subinteraction => {
 
                 let member = interaction.member;
-
-                let pkID = random(1,1010);
-                let shiny = random(1,4096);//4096
+                
+                let pkID = random(1,1025);
+                let shinyRate = random(1,4096);//4096
+                let isShiny = shinyRate === 1
                 let pkm = pokeliste.data[pkID];
                 let pkm_name = pkm[2];
                 let displayName = member.user.username;
@@ -81,7 +89,7 @@ module.exports = {
                     displayName = displayName.substring(0, (32 - (pkm_name.length + 7))) + "...";
                 }
 
-                if (shiny == 1) {
+                if (isShiny == 1) {
                     member.setNickname(displayName + " | " + pkm_name + "✨");
                     if (!member.roles.cache.has(shinyRoleId)) member.roles.add(member.guild.roles.cache.get(shinyRoleId));
                 } else {
@@ -92,6 +100,9 @@ module.exports = {
                 await subinteraction.deferUpdate();
 
                 await interaction.deleteReply();
+
+                logsChannel.send("Command : `me` | User : `" + interaction.user.username + "` | Pokemon : `" + pkm[0] + "` (*" + pkm[2] + "*) | Shiny : `" + isShiny + "` | ChannelType : `" + Object.keys(ChannelType).find(key => ChannelType[key] === interaction.channel.type) + "`");
+                interaction.client.stats.me += 1;
 
             }).catch(error => {
                 if (error.code === DiscordjsErrorCodes.InteractionCollectorError) {

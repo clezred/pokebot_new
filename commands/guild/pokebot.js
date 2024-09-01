@@ -17,8 +17,8 @@ module.exports = {
                 .setDescription('Changer le mode vanish')
         )
         .addSubcommand(subcommand =>
-            subcommand.setName('servers')
-                .setDescription('Les serveurs du PokéBot')
+            subcommand.setName('stats')
+                .setDescription('Les stats du PokéBot')
         )
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
     /**

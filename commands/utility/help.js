@@ -1,5 +1,5 @@
-const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
-const { guildId } = require('../../config.json')
+const { SlashCommandBuilder, PermissionFlagsBits, ChatInputCommandInteraction, ChannelType } = require('discord.js');
+const { guildId, logsChannelId } = require('../../config.json')
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -20,17 +20,21 @@ module.exports = {
 				{name: 'Pokébot', 	value: 'pokebot'}
             )
         ),
-		
+	
+	/**
+	 * Defines actions to do for this interaction
+	 * @param {ChatInputCommandInteraction} interaction - the interaction
+	 */
 	async execute(interaction) {
 
-		const choice = interaction.options.getString('commande') ?? 'basic';
+		const choice = interaction.options.getString('commande') ?? 'default';
 
 		const pkbServField = {
 			name:"PokéBot Support Server",
 			value: "Rejoins le [Serveur Discord Officiel](https://discord.gg/FrMYzXn48V) du PokéBot pour plus d'aide, plus d'informations ou pour nous partager tes suggestions pour le bot. (Il y a même des fonctionalités excusives !)"
 		}
 
-		if (choice === 'basic') {
+		if (choice === 'default') {
 			let guildCMDs = "";
 
 			if (interaction.guild != null) {
@@ -49,10 +53,10 @@ module.exports = {
 				embeds: [{
 					title: "Aide PokéBot",
 					color: 0xFFFF00,
-					description: "**Présentation du PokéBot :**\nLe PokéBot est un bot Discord créé par [clezred](https://twitch.tv/clezred) et basé sur l'univers de Pokémon. Grâce à lui, tu pourras jouer à des mini-jeux et en apprendre plus sur les Pokémons !",
+					description: "**Présentation du PokéBot**\nLe PokéBot est un bot Discord créé par [clezred](https://twitch.tv/clezred) et basé sur l'univers de Pokémon. Grâce à lui, tu pourras jouer à des mini-jeux et en apprendre plus sur les Pokémons !",
 					fields: [{
-							name: "Liste des commandes :",
-							value: "- `/help`\n- `/pokedex`\n- `/pokeloto`\n- `/team`\n- `/pokequiz`\n - `/pokeparty`" + guildCMDs,
+							name: "Liste des commandes",
+							value: "- `/help`\n- `/pokedex`\n- `/pokeloto`\n- `/team`\n- `/pokequiz`\n- `/pokeparty`" + guildCMDs,
 							inline: false
 						},
 						pkbServField
@@ -278,5 +282,10 @@ module.exports = {
 				ephemeral: true
 			})
 		}
+
+		let guild = interaction.client.guilds.cache.get(guildId);
+		let logsChannel = guild.channels.cache.get(logsChannelId);
+		logsChannel.send("Command : `help` | User : `" + interaction.user.username + "` | Choice : `" + choice + "` | ChannelType : `" + Object.keys(ChannelType).find(key => ChannelType[key] === interaction.channel.type) + "`");
+		interaction.client.stats.help += 1;
 	},
 };

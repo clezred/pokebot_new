@@ -1,5 +1,6 @@
-const { Collection, User, TextChannel, ComponentType, ButtonBuilder, ActionRowBuilder, ButtonStyle } = require("discord.js");
+const { Collection, User, ComponentType, ButtonBuilder, ActionRowBuilder, ButtonStyle, ChatInputCommandInteraction, ChannelType } = require("discord.js");
 const { random } = require('../../assets/js/random');
+const { guildId, logsChannelId } = require('../../config.json')
 const fs = require('node:fs');
 const Papa = require('papaparse');
 const latinize = require('latinize');
@@ -13,12 +14,19 @@ const pokeliste = Papa.parse(fs.readFileSync('./assets/csv/pokeliste.csv', 'utf-
 /**
  * a pokeparty game
  * @param {Collection<string, User>} players 
- * @param {TextChannel} channel
+ * @param {ChatInputCommandInteraction} interaction
  * @param {User} host
  */
-async function game(players, channel, host) {
+async function game(players, interaction, host) {
+    let guild = interaction.client.guilds.cache.get(guildId);
+    let logsChannel = guild.channels.cache.get(logsChannelId);
 
-    const pkm = pokeliste.data[random(1, 1010)];
+    const pkm = pokeliste.data[random(1, 1025)];
+
+    logsChannel.send("Command : `pokeparty` | User : `" + interaction.user.username + "` | State : `started` | Players : `" + players.size + "` | Pokemon : `" + pkm[0] + "` (*" + pkm[2] + "*) | ChannelType : `" + Object.keys(ChannelType).find(key => ChannelType[key] === interaction.channel.type) + "`");
+    interaction.client.stats.pokeparty += 1;
+
+    const channel = interaction.channel
 
     let found = false;
     let tries = new Collection();
@@ -262,9 +270,11 @@ async function game(players, channel, host) {
                 .then(async button => {
                     message2.edit({components: []})
                     clearTimeout(timer);
-                    game(players, channel, host);
+                    game(players, interaction, host);
                 })
         })
+
+        logsChannel.send("Command : `pokeparty` | User : `" + interaction.user.username + "` | State : `Ended` | Found : `" + found + "` | Players : `" + players.size + "` | Hints : `" + nbIndices + "` | Pokemon : `" + pkm[0] + "` (*" + pkm[2] + "*) | ChannelType : `" + Object.keys(ChannelType).find(key => ChannelType[key] === interaction.channel.type) + "`");
     })
 
 }

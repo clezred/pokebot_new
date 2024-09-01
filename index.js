@@ -113,7 +113,7 @@ client.on(Events.ClientReady, async () => {
 
     logsChannel.send(`PokéBot en ligne !`);
 
-    await refreshIntVars();
+    await refreshStats();
     await refreshBoolVars();
     refreshNotifsRoles();
 
@@ -125,7 +125,8 @@ client.on(Events.ClientReady, async () => {
         pkmGameActivity = random(1,38);
         updateBotStatus();
         updateStats();
-    }, 600000);
+        refreshStats();
+    }, 30000);
 });
 
 client.on(Events.MessageReactionAdd, async (reaction, user) => {
@@ -207,9 +208,10 @@ client.on(Events.InteractionCreate, async interaction => {
                 interaction.reply({content: 'Erreur lors du vanish du bot', ephemeral: true})
                 return;
             }
-        } else if (interaction.options.getSubcommand() == 'servers') {
+        } else if (interaction.options.getSubcommand() == 'stats') {
             try {
                 pkbotServers()
+                refreshStats()
             } catch (error) {
                 interaction.reply({content: 'Erreur lors de l\'affichage des serveurs du bot', ephemeral: true})
                 return;
@@ -232,7 +234,7 @@ client.on(Events.InteractionCreate, async interaction => {
 client.on(Events.GuildMemberAdd, member => {
 
     if (member.guild.id === guildId) {
-        let pkID = random(1,905);
+        let pkID = random(1,1025);
         let shiny = random(1,4096);//4096
         let pkm = pokeliste.data[pkID];
         let pkm_name = pkm[2];
@@ -292,13 +294,25 @@ async function updateStats() {
     servCountCh.setName('🌐 ' + guilds.size + ' Serveurs').catch(console.error)
 }
 
-async function refreshIntVars() {
-    await psqlClient.query('SELECT * FROM intvars')
+async function refreshStats() {
+    if (client.stats) {
+        for (const [key, value] of Object.entries(client.stats)) {
+            await psqlClient.query(
+                'INSERT INTO intvars (intvar_id, value) VALUES ($1, $2) ON CONFLICT (intvar_id) DO UPDATE SET value = $2',
+                [key, value]  
+            ).catch((error) => console.error('Erreur lors de la mise à jour des stats :', error));
+        }
+    } else {
+        await psqlClient.query('SELECT * FROM intvars')
         .then((res) => {
+            client.stats = {};
             res.rows.forEach(row => {
-                intVars[row.intvar_id] = row.value;
+                const parsedValue = parseInt(row.value, 10);
+                client.stats[row.intvar_id] = isNaN(parsedValue) ? row.value : parsedValue;
             })
         }).catch((error) => console.error(error));
+    }
+    
 }
 
 async function refreshBoolVars() {
@@ -395,17 +409,23 @@ async function pkbotServers() {
 
     guilds = client.guilds.cache;
 
-    let desc = "`" + guilds.size + " serveurs`";
+    let desc = "Nombre de serveurs : `" + guilds.size + "`\nNombre d'utilisateurs : `";
+
+    let totalUsers = 0;
 
     guilds.forEach(guild => {
-        desc += "\n- " + guild.name + " | " + guild.id + " | " + guild.memberCount;
+        totalUsers += guild.memberCount;
     });
-    
-    if (desc.length + 18 >= 4000) desc = desc.substring(0,3900);
+
+    desc += totalUsers + "`";
+
+    for (const [key, value] of Object.entries(client.stats)) {
+        desc += "\n" + key + " : `" + value + "`";
+    }
 
     logsChannel.send({embeds: [{
         author: {
-            name: "Liste des serveurs"
+            name: "PokéStats"
         },
         color: 0xFFFF00,
         description: desc

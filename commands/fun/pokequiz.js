@@ -1,5 +1,6 @@
-const { SlashCommandBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType, CommandInteraction } = require('discord.js');
+const { SlashCommandBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType, CommandInteraction, ChannelType, ChatInputCommandInteraction } = require('discord.js');
 const { random } = require('../../assets/js/random');
+const { guildId, logsChannelId } = require('../../config.json')
 const fs = require('node:fs');
 const Papa = require('papaparse');
 const latinize = require('latinize');
@@ -17,10 +18,15 @@ module.exports = {
 
     /**
      * 
-     * @param {CommandInteraction} interaction 
+     * @param {ChatInputCommandInteraction} interaction 
      */
     async execute(interaction) {
-        let pkm = pokeliste.data[random(1,1010)-1];
+        let pkm = pokeliste.data[random(1,1025)-1];
+
+        let guild = interaction.client.guilds.cache.get(guildId);
+		let logsChannel = guild.channels.cache.get(logsChannelId);
+		logsChannel.send("Command : `pokequiz` | User : `" + interaction.user.username + "` | Pokemon : `" + pkm[0] + "` (*" + pkm[2] + ") | ChannelType : `" + Object.keys(ChannelType).find(key => ChannelType[key] === interaction.channel.type) + "`");
+        interaction.client.stats.pokequiz += 1;
 
         let found = false;
         let tries = 0;
@@ -218,6 +224,8 @@ module.exports = {
                     components: []
                 })
             }
+
+            logsChannel.send("Command : `pokeparty` | User : `" + interaction.user.username + "` | State : `ended` | Found : `" + found + "` | Hints : `" + nbIndices + "` | Pokemon : `" + pkm[0] + "` (*" + pkm[2] + "*) | ChannelType : `" + Object.keys(ChannelType).find(key => ChannelType[key] === interaction.channel.type) + "`");
         })
     }
 }

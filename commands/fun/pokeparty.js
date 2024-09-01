@@ -1,5 +1,6 @@
-const { SlashCommandBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType, CommandInteraction, Collection} = require('discord.js');
+const { SlashCommandBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType, Collection, ChatInputCommandInteraction, ChannelType } = require('discord.js');
 const { game } = require('../../assets/js/pokeparty.js')
+const { guildId, logsChannelId } = require('../../config.json')
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -38,7 +39,7 @@ module.exports = {
 
     /**
      * 
-     * @param {CommandInteraction} interaction 
+     * @param {ChatInputCommandInteraction} interaction 
      */
     async execute(interaction) {
         
@@ -49,6 +50,10 @@ module.exports = {
         const acces = interaction.options.getString('acces') ?? 'public';
 
         players.set(interaction.user.id, interaction.user);
+
+        let guild = interaction.client.guilds.cache.get(guildId);
+		let logsChannel = guild.channels.cache.get(logsChannelId);
+		logsChannel.send("Command : `pokeparty` | User : `" + interaction.user.username + "` | State : `lobby` | Access : `" + acces + "` | ChannelType : `" + Object.keys(ChannelType).find(key => ChannelType[key] === interaction.channel.type) + "`");
 
         for (i = 2; i < 6; i++) {
             let player = interaction.options.getUser(`joueur${i}`);
@@ -198,6 +203,7 @@ module.exports = {
                             embed.footer.text = 'Hôte de la partie : ' + host.username;
                         } else {
                             await interaction.editReply({content: 'Partie annulée', embeds: [], components: []}).then(msg => setTimeout(() => {interaction.deleteReply()}, 5000),);
+                            logsChannel.send("Command : `pokeparty` | User : `" + interaction.user.username + "` | State : `cancelled` | Access : `" + acces + "` | ChannelType : `" + Object.keys(ChannelType).find(key => ChannelType[key] === interaction.channel.type) + "`");
                             lobbyCollector.stop();
                             return;
                         }
@@ -210,7 +216,7 @@ module.exports = {
             } else if (btn.customId == 'start') {
                 if (btn.user.id == host.id) {
                     interaction.deleteReply();
-                    game(players, interaction.channel, host);
+                    game(players, interaction, host);
                     lobbyCollector.stop();
                 }
             }
