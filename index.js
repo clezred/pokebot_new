@@ -95,7 +95,6 @@ let mainGuild;
 let logsChannel;
 let servCountCh;
 
-let intVars = {};
 let boolVars = {
     "maintenance": false,
     "vanish": false
@@ -126,7 +125,7 @@ client.on(Events.ClientReady, async () => {
         updateBotStatus();
         updateStats();
         refreshStats();
-    }, 30000);
+    }, 600000);
 });
 
 client.on(Events.MessageReactionAdd, async (reaction, user) => {
@@ -256,12 +255,12 @@ client.on(Events.GuildMemberAdd, member => {
 
 client.on(Events.GuildCreate, async guild => {
     await guild.fetch()
-    logsChannel.send(`PokéBot ajouté au serveur ${guild.name} qui compte ${guild.memberCount} membres.`)
+    logsChannel.send(`> New server : ${guild.name} | Members : ${guild.memberCount}`)
     updateStats();
 })
 
 client.on(Events.GuildDelete, guild => {
-    logsChannel.send(`PokéBot retiré du serveur ${guild.name} qui compte ${guild.memberCount} membres.`)
+    logsChannel.send(`> Removed : ${guild.name} | Members : ${guild.memberCount}`)
     updateStats();
 })
 

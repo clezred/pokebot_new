@@ -225,7 +225,7 @@ module.exports = {
                 })
             }
 
-            logsChannel.send("Command : `pokeparty` | User : `" + interaction.user.username + "` | State : `ended` | Found : `" + found + "` | Hints : `" + nbIndices + "` | Pokemon : `" + pkm[0] + "` (*" + pkm[2] + "*) | ChannelType : `" + Object.keys(ChannelType).find(key => ChannelType[key] === interaction.channel.type) + "`");
+            logsChannel.send("Command : `pokequiz` | User : `" + interaction.user.username + "` | State : `ended` | Found : `" + found + "` | Hints : `" + nbIndices + "` | Pokemon : `" + pkm[0] + "` (*" + pkm[2] + "*) | ChannelType : `" + Object.keys(ChannelType).find(key => ChannelType[key] === interaction.channel.type) + "`");
         })
     }
 }
