@@ -1,0 +1,15 @@
+{
+    "clientId": "938122310228013057",
+    "guildId": "941457300214931517",
+
+    "shinyRoleId": "1113911864485744760",
+    "memberRoleId": "942135783802957904",
+
+    "logsChannelId": "941696890234359808",
+    "welcomeChannelId": "941461329376600114",
+    "serverCountChannelId": "941690566306062367",
+    
+    "notifsChannelId": "1124080340680589433",
+    "notifsMessageId": "1124415086996488252",
+    "notifsRoleId" : "1124080525741654016"
+}

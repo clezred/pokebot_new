@@ -1,6 +1,6 @@
 # Conditions d'utilisation du PokéBot
 
-Dernière mise à jour : 21/08/2023
+Dernière mise à jour : 24 Décembre 2024
 
 Bienvenue ! En utilisant ce service, vous acceptez les présentes Conditions d'Utilisation. Veuillez les lire attentivement avant d'utiliser le bot.
 ## 1. Description du Service
@@ -17,7 +17,7 @@ En utilisant PokéBot, vous acceptez de :
 
 ## 3. Propriété Intellectuelle
 
-Tous les droits de propriété intellectuelle liés au PokéBot sont la propriété exclusive de @clezred, le créateur et unique développeur du projet. Les contenus et les ressources présentes sont quant à elles la propriété exclusive de Nintendo et The Pokémon Company.
+Tous les droits de propriété intellectuelle liés au PokéBot sont la propriété exclusive de @clezred, le créateur et unique développeur du projet. Les contenus et les ressources présentes sont quant à elles la propriété exclusive de Nintendo et The Pokémon Company et son fournies à l'aide d'une application web tierce ([PokeAPI](https://pokeapi.co/)).
 ## 4. Limitation de Responsabilité
 
 Vous comprenez et acceptez que l'utilisation du PokéBot se fait à vos propres risques. @clezred ne saurait être tenu responsable des dommages directs ou indirects résultant de l'utilisation du bot.

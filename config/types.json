@@ -1,0 +1,82 @@
+{
+  "normal": {
+    "color": "A0A29F",
+    "name": "Normal"
+  },
+  "fighting": {
+    "color": "D6435F",
+    "name": "Combat"
+  },
+  "flying": {
+    "color": "98BCEC",
+    "name": "Vol"
+  },
+  "poison": {
+    "color": "B066CF",
+    "name": "Poison"
+  },
+  "ground": {
+    "color": "DE7C4D",
+    "name": "Sol"
+  },
+  "rock": {
+    "color": "CEBB8B",
+    "name": "Roche"
+  },
+  "bug": {
+    "color": "9BBB31",
+    "name": "Insecte"
+  },
+  "ghost": {
+    "color": "4E6FBC",
+    "name": "Spectre"
+  },
+  "steel": {
+    "color": "4F95A3",
+    "name": "Acier"
+  },
+  "fire": {
+    "color": "FFA54D",
+    "name": "Feu"
+  },
+  "water": {
+    "color": "349EDF",
+    "name": "Eau"
+  },
+  "grass": {
+    "color": "6ABD5A",
+    "name": "Plante"
+  },
+  "electric": {
+    "color": "FBD850",
+    "name": "Electrique"
+  },
+  "psychic": {
+    "color": "FE8581",
+    "name": "Psy"
+  },
+  "ice": {
+    "color": "73D0C2",
+    "name": "Glace"
+  },
+  "dragon": {
+    "color": "006CC7",
+    "name": "Dragon"
+  },
+  "dark": {
+    "color": "585761",
+    "name": "Ténèbres"
+  },
+  "fairy": {
+    "color": "EB93E5",
+    "name": "Fée"
+  },
+  "stellar": {
+    "color": "FFD700",
+    "name": "Stellaire"
+  },
+  "unknown": {
+    "color": "A0A29F",
+    "name": "Inconnu"
+  }
+}

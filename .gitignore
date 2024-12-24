@@ -3,3 +3,5 @@ node_modules/
 configTest.json
 configBot.json
 .vscode/
+.env
+src/dbtransfer.js

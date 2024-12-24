@@ -1,19 +1,26 @@
 # **Fonctionnalités du PokéBot**
 
 ## Commandes   
-___
 ### **Commandes Globales**
 Obtenir de l'aide sur l'utilisation du PokéBot
-> `/help`
+> `/help` | Aide globale et par commande
+>
+> `/support` | Donne un lien vers de serveur Discord de support
 
 Rechercher un Pokémon dans le Pokédex
 > `/pokedex`
+>
+>_Taux de drop d'un Pokémon shiny : 1/4096_
 
-Afficher un Pokémon aléatoirement parmis les 1010 répertoriés
+Afficher un Pokémon aléatoirement parmis les 1025 répertoriés
 > `/pokeloto`
+>
+>_Taux de drop d'un Pokémon shiny : 1/4096_
 
-Afficher aléatoirement une équipe de 6 Pokémons
+Afficher aléatoirement une équipe de 6 Pokémons (Toutes formes confondues)
 > `/team`
+>
+>_Taux de drop d'un Pokémon shiny : 1/4096 (soit 3/2048)_
 
 Jouer au PokéQuiz
 > `/pokequiz`
@@ -25,22 +32,11 @@ ___
 Ajouter un salon pour recevoir les actualités et les patch-notes (ou le retirer)
 > `/news-channel`
 ___
-### **Commandes Administrateur PokéBot**
-Arrêter le bot
-> `/pokebot stop`
-
-Passer le bot en mode "Maintenance"
-> `/pokebot maintenance`
-
-Passer le bot en mode "Vanish"
-> `/pokebot vanish`
-
-Publier les actualités et patch-notes
-> `/publish`
-___
 ### **Commandes exclusives au [Serveur Discord PokéBot](https://discord.gg/FrMYzXn48V)**
-Obtenir/Changer le Pokémon qui te représente (aléatoirement)
+Obtenir/Changer le Pokémon qui te représente sur le serveur (aléatoirement)
 > `/me`
+>
+>_Taux de drop d'un Pokémon shiny : 1/4096_
 ___
 
 ## Fonctionalités Passives

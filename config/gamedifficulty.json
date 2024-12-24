@@ -1,0 +1,32 @@
+{
+    "easy": {
+        "name": "Dresseur",
+        "hints": 4,
+        "time": 300000,
+        "tries": -1
+    },
+    "medium": {
+        "name": "Champion d'Arène",
+        "hints": 2,
+        "time": 180000,
+        "tries": -1
+    },
+    "hard": {
+        "name": "Membre du Conseil 4",
+        "hints": 1,
+        "time": 120000, 
+        "tries": 10
+    },
+    "extreme": {
+        "name": "Maître de la Ligue",
+        "hints": 0,
+        "time": 60000, 
+        "tries": 3
+    },
+    "impossible": {
+        "name": "Professeur Pokémon",
+        "hints": 0,
+        "time": 30000, 
+        "tries": 1
+    }
+}
