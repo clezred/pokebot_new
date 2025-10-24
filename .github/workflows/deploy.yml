@@ -1,0 +1,33 @@
+name: Deploy Discord Bot
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18.20.4'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Start the bot
+      run: node .
+      env:
+        TOKEN: ${{ secrets.DISCORD_TOKEN }}
+        DB_HOST: ${{ secrets.DB_HOST }}
+        DB_PORT: ${{ secrets.DB_PORT }}
+        DB_USER: ${{ secrets.DB_USER }}
+        DB_NAME: ${{ secrets.DB_NAME }}
+        DB_PASS: ${{ secrets.DB_PASS }}
